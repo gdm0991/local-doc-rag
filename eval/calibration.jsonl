@@ -1,0 +1,10 @@
+{"id": "C01", "kind": "answerable", "question": "Какой контроллер стоит на стенде испытаний электродвигателей ЭС-1?", "answer": "К-220", "answer_keys": ["К-220"], "sources": ["es1/re_es1.md"], "fact": "es1.plc"}
+{"id": "C02", "kind": "answerable", "question": "Аварийная уставка виброускорения стола на ВС-6?", "answer": "188 м/с²", "answer_keys": ["188"], "sources": ["vs6/re_vs6.md", "vs6/karta_ustavok_vs6.md"], "fact": "vs6.A_VIB.alarm"}
+{"id": "C03", "kind": "answerable", "question": "Через сколько моточасов меняют фильтр маслосистемы на стенде ИС-3?", "answer": "250", "answer_keys": ["250"], "sources": ["is3/reglament_to_is3.md"], "fact": "is3.filter_hours"}
+{"id": "C04", "kind": "answerable", "question": "Сколько слотов расширения у контроллера К-240?", "answer": "16", "answer_keys": ["16"], "sources": ["obshchie/k200_rukovodstvo_programmista.md"], "fact": "plc.К-240.slots"}
+{"id": "C05", "kind": "answerable", "question": "Через сколько минут после аварийного останова можно повторно пустить ГС-2?", "answer": "30", "answer_keys": ["30"], "sources": ["gs2/instrukciya_avariynyy_ostanov_gs2.md"], "fact": "gs2.restart_wait"}
+{"id": "CT01", "kind": "trap", "question": "Какая уставка давления масла на стенде ТС-1?", "answer": null, "answer_keys": [], "sources": [], "fact": null}
+{"id": "CT02", "kind": "trap", "question": "Сколько стоит калибратор КТ-7?", "answer": null, "answer_keys": [], "sources": [], "fact": null}
+{"id": "CT03", "kind": "trap", "question": "Какая уставка температуры обмотки статора на стенде ИС-7?", "answer": null, "answer_keys": [], "sources": [], "fact": null}
+{"id": "CT04", "kind": "trap", "question": "Кто поставщик термопар ТП-К?", "answer": null, "answer_keys": [], "sources": [], "fact": null}
+{"id": "CT05", "kind": "trap", "question": "Какая масса подвижного стола вибростенда ВС-6?", "answer": null, "answer_keys": [], "sources": [], "fact": null}

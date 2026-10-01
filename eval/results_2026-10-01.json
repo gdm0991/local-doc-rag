@@ -1,0 +1,620 @@
+{
+ "date": "2026-10-01",
+ "env": {
+  "os": "Linux-6.18.44-fc-v50-x86_64-with-glibc2.39",
+  "python": "3.11.15",
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "logical_cpus": 2,
+  "ram": "7.8 ГБ",
+  "packages": {
+   "fastembed": "0.8.1",
+   "onnxruntime": "1.25.0",
+   "rank-bm25": "0.2.2",
+   "scikit-learn": "1.8.0",
+   "llama_cpp_python": "0.3.36",
+   "fastapi": "0.142.2"
+  }
+ },
+ "info": {
+  "ready": true,
+  "chunks": 155,
+  "documents": 93,
+  "embed_backend": "fastembed:intfloat/multilingual-e5-small",
+  "embed_fallback_reason": null,
+  "llm": "llamacpp:qwen2.5-3b-instruct-q4_k_m.gguf",
+  "index_dir": "/tmp/ldr_eval_final"
+ },
+ "ingest": {
+  "documents": 93,
+  "chunks": 155,
+  "embed_backend": "fastembed:intfloat/multilingual-e5-small",
+  "seconds": 35.5
+ },
+ "retrieval": {
+  "hybrid": {
+   "recall@5": 0.9333333333333333,
+   "mrr@10": 0.8429100529100529,
+   "p50_ms": 10.256154500211778,
+   "p95_ms": 13.584080999862636,
+   "ranks": {
+    "Q01": 1,
+    "Q02": 1,
+    "Q03": 3,
+    "Q04": 1,
+    "Q05": 1,
+    "Q06": 1,
+    "Q07": 5,
+    "Q08": 2,
+    "Q09": 1,
+    "Q10": 2,
+    "Q11": 7,
+    "Q12": 9,
+    "Q13": 1,
+    "Q14": 1,
+    "Q15": 1,
+    "Q16": 1,
+    "Q17": 2,
+    "Q18": 1,
+    "Q19": 1,
+    "Q20": 1,
+    "Q21": 1,
+    "Q22": 1,
+    "Q23": 1,
+    "Q24": 1,
+    "Q25": 1,
+    "Q26": 1,
+    "Q27": 1,
+    "Q28": 1,
+    "Q29": 1,
+    "Q30": 1
+   },
+   "n": 30
+  },
+  "bm25": {
+   "recall@5": 0.9333333333333333,
+   "mrr@10": 0.776984126984127,
+   "p50_ms": 0.4483835000428371,
+   "p95_ms": 0.667893999889202,
+   "ranks": {
+    "Q01": 1,
+    "Q02": 1,
+    "Q03": 3,
+    "Q04": 2,
+    "Q05": 2,
+    "Q06": 4,
+    "Q07": 4,
+    "Q08": 2,
+    "Q09": 1,
+    "Q10": 3,
+    "Q11": 7,
+    "Q12": null,
+    "Q13": 1,
+    "Q14": 1,
+    "Q15": 1,
+    "Q16": 1,
+    "Q17": 2,
+    "Q18": 1,
+    "Q19": 1,
+    "Q20": 1,
+    "Q21": 1,
+    "Q22": 1,
+    "Q23": 1,
+    "Q24": 1,
+    "Q25": 1,
+    "Q26": 1,
+    "Q27": 1,
+    "Q28": 1,
+    "Q29": 1,
+    "Q30": 1
+   },
+   "n": 30
+  },
+  "vector": {
+   "recall@5": 0.9,
+   "mrr@10": 0.8180555555555555,
+   "p50_ms": 11.154574000102002,
+   "p95_ms": 15.613088000009157,
+   "ranks": {
+    "Q01": 1,
+    "Q02": 1,
+    "Q03": 2,
+    "Q04": 1,
+    "Q05": 1,
+    "Q06": 1,
+    "Q07": 8,
+    "Q08": 4,
+    "Q09": 1,
+    "Q10": 2,
+    "Q11": 6,
+    "Q12": null,
+    "Q13": 1,
+    "Q14": 1,
+    "Q15": 1,
+    "Q16": 1,
+    "Q17": 2,
+    "Q18": 1,
+    "Q19": 2,
+    "Q20": 1,
+    "Q21": 1,
+    "Q22": 1,
+    "Q23": 1,
+    "Q24": 1,
+    "Q25": 1,
+    "Q26": 1,
+    "Q27": 1,
+    "Q28": 1,
+    "Q29": 1,
+    "Q30": 1
+   },
+   "n": 30
+  }
+ },
+ "nollm": {
+  "threshold": 0.424,
+  "trap_refusal": 0.6,
+  "false_refusal": 0.3333333333333333,
+  "n_traps": 10,
+  "n_answerable": 30,
+  "rows": {
+   "Q01": {
+    "refused": false,
+    "coverage": 0.465
+   },
+   "Q02": {
+    "refused": false,
+    "coverage": 1.0
+   },
+   "Q03": {
+    "refused": true,
+    "coverage": 0.424
+   },
+   "Q04": {
+    "refused": false,
+    "coverage": 0.59
+   },
+   "Q05": {
+    "refused": false,
+    "coverage": 0.512
+   },
+   "Q06": {
+    "refused": true,
+    "coverage": 0.22
+   },
+   "Q07": {
+    "refused": true,
+    "coverage": 0.195
+   },
+   "Q08": {
+    "refused": false,
+    "coverage": 0.77
+   },
+   "Q09": {
+    "refused": true,
+    "coverage": 0.356
+   },
+   "Q10": {
+    "refused": true,
+    "coverage": 0.253
+   },
+   "Q11": {
+    "refused": false,
+    "coverage": 0.584
+   },
+   "Q12": {
+    "refused": true,
+    "coverage": 0.384
+   },
+   "Q13": {
+    "refused": false,
+    "coverage": 0.692
+   },
+   "Q14": {
+    "refused": false,
+    "coverage": 1.0
+   },
+   "Q15": {
+    "refused": false,
+    "coverage": 0.506
+   },
+   "Q16": {
+    "refused": false,
+    "coverage": 0.719
+   },
+   "Q17": {
+    "refused": false,
+    "coverage": 1.0
+   },
+   "Q18": {
+    "refused": true,
+    "coverage": 0.246
+   },
+   "Q19": {
+    "refused": false,
+    "coverage": 0.741
+   },
+   "Q20": {
+    "refused": true,
+    "coverage": 0.309
+   },
+   "Q21": {
+    "refused": false,
+    "coverage": 0.45
+   },
+   "Q22": {
+    "refused": true,
+    "coverage": 0.411
+   },
+   "Q23": {
+    "refused": true,
+    "coverage": 0.248
+   },
+   "Q24": {
+    "refused": false,
+    "coverage": 1.0
+   },
+   "Q25": {
+    "refused": false,
+    "coverage": 0.666
+   },
+   "Q26": {
+    "refused": false,
+    "coverage": 0.651
+   },
+   "Q27": {
+    "refused": false,
+    "coverage": 1.0
+   },
+   "Q28": {
+    "refused": false,
+    "coverage": 1.0
+   },
+   "Q29": {
+    "refused": false,
+    "coverage": 0.487
+   },
+   "Q30": {
+    "refused": false,
+    "coverage": 0.735
+   },
+   "QT01": {
+    "refused": true,
+    "coverage": 0.381
+   },
+   "QT02": {
+    "refused": true,
+    "coverage": 0.193
+   },
+   "QT03": {
+    "refused": true,
+    "coverage": 0.275
+   },
+   "QT04": {
+    "refused": false,
+    "coverage": 0.683
+   },
+   "QT05": {
+    "refused": false,
+    "coverage": 0.464
+   },
+   "QT06": {
+    "refused": true,
+    "coverage": 0.314
+   },
+   "QT07": {
+    "refused": true,
+    "coverage": 0.365
+   },
+   "QT08": {
+    "refused": false,
+    "coverage": 0.493
+   },
+   "QT09": {
+    "refused": true,
+    "coverage": 0.169
+   },
+   "QT10": {
+    "refused": false,
+    "coverage": 0.655
+   }
+  }
+ },
+ "calib": {
+  "coverage": [
+   [
+    0.666,
+    "answerable"
+   ],
+   [
+    1.0,
+    "answerable"
+   ],
+   [
+    0.427,
+    "answerable"
+   ],
+   [
+    1.0,
+    "answerable"
+   ],
+   [
+    0.486,
+    "answerable"
+   ],
+   [
+    0.164,
+    "trap"
+   ],
+   [
+    0.603,
+    "trap"
+   ],
+   [
+    0.421,
+    "trap"
+   ],
+   [
+    0.561,
+    "trap"
+   ],
+   [
+    0.294,
+    "trap"
+   ]
+  ],
+  "best_threshold": 0.424,
+  "correct": 8,
+  "n": 10
+ },
+ "llm": {
+  "llm": "llamacpp:qwen2.5-3b-instruct-q4_k_m.gguf",
+  "answer_accuracy": 0.6,
+  "trap_refusal": 0.8,
+  "false_refusal": 0.1,
+  "p50_ms": 81540.02153849979,
+  "p95_ms": 103004.22245400024,
+  "rows": {
+   "Q01": {
+    "answer": "[1] [4] Ток двигателя привода превышает аварийную уставку 204 А при выходе давления масла на выходе насоса выше аварийной уставки 0,24 МПа.",
+    "refused": false,
+    "ok": true,
+    "ms": 105497
+   },
+   "Q02": {
+    "answer": "[2] [3] 82 °C",
+    "refused": false,
+    "ok": true,
+    "ms": 86120
+   },
+   "Q03": {
+    "answer": "[4] Не знаю: в найденных документах ответа нет.",
+    "refused": true,
+    "ok": false,
+    "ms": 87033
+   },
+   "Q04": {
+    "answer": "[1] [3] [4] Аварийное испытательное давление в изделии на стенде ГС-4 составляет 50 МПа, это указано в таблице уставок и протоколе испытаний.",
+    "refused": false,
+    "ok": true,
+    "ms": 90832
+   },
+   "Q05": {
+    "answer": "[2] [4] Температура масла в картере редуктора на ИС-7 вызовет аварийный останов при превышении значения в 104 °C. [4]",
+    "refused": false,
+    "ok": true,
+    "ms": 97184
+   },
+   "Q06": {
+    "answer": "[1] 7,1 мм/с",
+    "refused": false,
+    "ok": true,
+    "ms": 69657
+   },
+   "Q07": {
+    "answer": "[5]",
+    "refused": false,
+    "ok": false,
+    "ms": 81564
+   },
+   "Q08": {
+    "answer": "[2] Задержка, с: 3",
+    "refused": false,
+    "ok": true,
+    "ms": 88274
+   },
+   "Q09": {
+    "answer": "[1] [4] [5] Контроллер: К-220.",
+    "refused": false,
+    "ok": true,
+    "ms": 90566
+   },
+   "Q10": {
+    "answer": "[2] [5] Не знаю: в найденных документах ответа нет.",
+    "refused": true,
+    "ok": false,
+    "ms": 82106
+   },
+   "Q11": {
+    "answer": "[1] [4] [5] [3] [2] [1] [5] [3] [2] [1] [4] [5] [3] [2] [1] [4] [5] [3] [2] [1] [4] [5] [3] [2] [1] [4] [5] [3] [2] [1] [4] [5] [3] [2] [1] [4] [5] [3] [2] [1] [4] [5] [3] [2] [1] [4] [5] [3] [2] [1] [4] [5] [3] [",
+    "refused": false,
+    "ok": false,
+    "ms": 120562
+   },
+   "Q12": {
+    "answer": "[4]",
+    "refused": false,
+    "ok": false,
+    "ms": 90070
+   },
+   "Q13": {
+    "answer": "[1] [5] Слот 2, канал 3.",
+    "refused": false,
+    "ok": true,
+    "ms": 95673
+   },
+   "Q14": {
+    "answer": "[1] Кнопка аварийного останова заведена на дискретный вход ПЛК (слот 4, канал 1, модуль МВД-16).",
+    "refused": false,
+    "ok": true,
+    "ms": 93176
+   },
+   "Q15": {
+    "answer": "[1]",
+    "refused": false,
+    "ok": false,
+    "ms": 88070
+   },
+   "Q16": {
+    "answer": "[1] [4]",
+    "refused": false,
+    "ok": false,
+    "ms": 68969
+   },
+   "Q17": {
+    "answer": "[1] [2] Unit ID у контроллера стенда ИС-3 — 4.",
+    "refused": false,
+    "ok": true,
+    "ms": 81446
+   },
+   "Q18": {
+    "answer": "[3]",
+    "refused": false,
+    "ok": false,
+    "ms": 77300
+   },
+   "Q19": {
+    "answer": "[1] [4] Минимальная темперatura масла для пуска разрешена 25 °C. При более низкой температуре включить подогрев бака.",
+    "refused": false,
+    "ok": true,
+    "ms": 81516
+   },
+   "Q20": {
+    "answer": "Не знаю: в найденных документах ответа нет. [1]",
+    "refused": true,
+    "ok": false,
+    "ms": 75962
+   },
+   "Q21": {
+    "answer": "[4] [5] 20 мин.",
+    "refused": false,
+    "ok": true,
+    "ms": 80644
+   },
+   "Q22": {
+    "answer": "[1] [4] 10 мин",
+    "refused": false,
+    "ok": true,
+    "ms": 46752
+   },
+   "Q23": {
+    "answer": "[1] 6 месяцев",
+    "refused": false,
+    "ok": false,
+    "ms": 95806
+   },
+   "Q24": {
+    "answer": "[1] 24 мес",
+    "refused": false,
+    "ok": true,
+    "ms": 95794
+   },
+   "Q25": {
+    "answer": "[1] 250 моточасов",
+    "refused": false,
+    "ok": true,
+    "ms": 68708
+   },
+   "Q26": {
+    "answer": "[2]",
+    "refused": false,
+    "ok": false,
+    "ms": 71093
+   },
+   "Q27": {
+    "answer": "Заключение: изделие не соответствует требованиям программы испытаний.",
+    "refused": false,
+    "ok": true,
+    "ms": 85068
+   },
+   "Q28": {
+    "answer": "12 МПа [1]",
+    "refused": false,
+    "ok": false,
+    "ms": 76598
+   },
+   "Q29": {
+    "answer": "[1] 90 мин.",
+    "refused": false,
+    "ok": true,
+    "ms": 76913
+   },
+   "Q30": {
+    "answer": "[1] [2] Код ошибки E12 на контроллерах серии К-200 означает обрыв линии аналогового входа (ток < 3,6 мА).",
+    "refused": false,
+    "ok": true,
+    "ms": 81729
+   },
+   "QT01": {
+    "answer": "Не знаю: в найденных документах ответа нет. [1]",
+    "refused": true,
+    "ok": true,
+    "ms": 77336
+   },
+   "QT02": {
+    "answer": "Не знаю: в найденных документах ответа нет. [1]",
+    "refused": true,
+    "ok": true,
+    "ms": 90133
+   },
+   "QT03": {
+    "answer": "[1]",
+    "refused": false,
+    "ok": false,
+    "ms": 69167
+   },
+   "QT04": {
+    "answer": "[1] Не знаю: в найденных документах ответа нет.",
+    "refused": true,
+    "ok": true,
+    "ms": 76590
+   },
+   "QT05": {
+    "answer": "Не знаю: в найденных документах ответа нет. [5]",
+    "refused": true,
+    "ok": true,
+    "ms": 103004
+   },
+   "QT06": {
+    "answer": "Не знаю: в найденных документах ответа нет. [1]",
+    "refused": true,
+    "ok": true,
+    "ms": 72302
+   },
+   "QT07": {
+    "answer": "Не знаю: в найденных документах ответа нет. [1]",
+    "refused": true,
+    "ok": true,
+    "ms": 74638
+   },
+   "QT08": {
+    "answer": "Не знаю: в найденных документах ответа нет. [1]",
+    "refused": true,
+    "ok": true,
+    "ms": 76852
+   },
+   "QT09": {
+    "answer": "[3]",
+    "refused": false,
+    "ok": false,
+    "ms": 76325
+   },
+   "QT10": {
+    "answer": "Не знаю: в найденных документах ответа нет. [1]",
+    "refused": true,
+    "ok": true,
+    "ms": 78396
+   }
+  }
+ },
+ "rescored": "2026-10-01",
+ "note": "Прогон 1: системный промпт v1 (по умолчанию в local_doc_rag/llm.py). Модель Qwen2.5-3B-Instruct Q4_K_M, файл qwen2.5-3b-instruct-q4_k_m.gguf из репозитория Qwen/Qwen2.5-3B-Instruct-GGUF на Hugging Face. Первая версия проверки ответов насчитала 19 из 30 (0,63): она засчитала ответ «[5]» на Q07, приняв номер фрагмента за значение. После исправления — 18 из 30."
+}

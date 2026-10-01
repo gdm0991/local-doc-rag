@@ -1,0 +1,619 @@
+{
+ "date": "2026-10-01",
+ "env": {
+  "os": "Linux-6.18.44-fc-v50-x86_64-with-glibc2.39",
+  "python": "3.11.15",
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "logical_cpus": 2,
+  "ram": "7.8 ГБ",
+  "packages": {
+   "fastembed": "0.8.1",
+   "onnxruntime": "1.25.0",
+   "rank-bm25": "0.2.2",
+   "scikit-learn": "1.8.0",
+   "llama_cpp_python": "0.3.36",
+   "fastapi": "0.142.2"
+  }
+ },
+ "info": {
+  "ready": true,
+  "chunks": 155,
+  "documents": 93,
+  "embed_backend": "fastembed:intfloat/multilingual-e5-small",
+  "embed_fallback_reason": null,
+  "llm": "llamacpp:qwen2.5-3b-instruct-q4_k_m.gguf",
+  "index_dir": "/tmp/ldr_eval_final2"
+ },
+ "ingest": {
+  "documents": 93,
+  "chunks": 155,
+  "embed_backend": "fastembed:intfloat/multilingual-e5-small",
+  "seconds": 36.11
+ },
+ "retrieval": {
+  "hybrid": {
+   "recall@5": 0.9333333333333333,
+   "mrr@10": 0.8429100529100529,
+   "p50_ms": 20.9367824995752,
+   "p95_ms": 29.238576000352623,
+   "ranks": {
+    "Q01": 1,
+    "Q02": 1,
+    "Q03": 3,
+    "Q04": 1,
+    "Q05": 1,
+    "Q06": 1,
+    "Q07": 5,
+    "Q08": 2,
+    "Q09": 1,
+    "Q10": 2,
+    "Q11": 7,
+    "Q12": 9,
+    "Q13": 1,
+    "Q14": 1,
+    "Q15": 1,
+    "Q16": 1,
+    "Q17": 2,
+    "Q18": 1,
+    "Q19": 1,
+    "Q20": 1,
+    "Q21": 1,
+    "Q22": 1,
+    "Q23": 1,
+    "Q24": 1,
+    "Q25": 1,
+    "Q26": 1,
+    "Q27": 1,
+    "Q28": 1,
+    "Q29": 1,
+    "Q30": 1
+   },
+   "n": 30
+  },
+  "bm25": {
+   "recall@5": 0.9333333333333333,
+   "mrr@10": 0.776984126984127,
+   "p50_ms": 1.0652140003912791,
+   "p95_ms": 1.345405999927607,
+   "ranks": {
+    "Q01": 1,
+    "Q02": 1,
+    "Q03": 3,
+    "Q04": 2,
+    "Q05": 2,
+    "Q06": 4,
+    "Q07": 4,
+    "Q08": 2,
+    "Q09": 1,
+    "Q10": 3,
+    "Q11": 7,
+    "Q12": null,
+    "Q13": 1,
+    "Q14": 1,
+    "Q15": 1,
+    "Q16": 1,
+    "Q17": 2,
+    "Q18": 1,
+    "Q19": 1,
+    "Q20": 1,
+    "Q21": 1,
+    "Q22": 1,
+    "Q23": 1,
+    "Q24": 1,
+    "Q25": 1,
+    "Q26": 1,
+    "Q27": 1,
+    "Q28": 1,
+    "Q29": 1,
+    "Q30": 1
+   },
+   "n": 30
+  },
+  "vector": {
+   "recall@5": 0.9,
+   "mrr@10": 0.8180555555555555,
+   "p50_ms": 17.537374499625002,
+   "p95_ms": 23.134738999942783,
+   "ranks": {
+    "Q01": 1,
+    "Q02": 1,
+    "Q03": 2,
+    "Q04": 1,
+    "Q05": 1,
+    "Q06": 1,
+    "Q07": 8,
+    "Q08": 4,
+    "Q09": 1,
+    "Q10": 2,
+    "Q11": 6,
+    "Q12": null,
+    "Q13": 1,
+    "Q14": 1,
+    "Q15": 1,
+    "Q16": 1,
+    "Q17": 2,
+    "Q18": 1,
+    "Q19": 2,
+    "Q20": 1,
+    "Q21": 1,
+    "Q22": 1,
+    "Q23": 1,
+    "Q24": 1,
+    "Q25": 1,
+    "Q26": 1,
+    "Q27": 1,
+    "Q28": 1,
+    "Q29": 1,
+    "Q30": 1
+   },
+   "n": 30
+  }
+ },
+ "nollm": {
+  "threshold": 0.424,
+  "trap_refusal": 0.6,
+  "false_refusal": 0.3333333333333333,
+  "n_traps": 10,
+  "n_answerable": 30,
+  "rows": {
+   "Q01": {
+    "refused": false,
+    "coverage": 0.465
+   },
+   "Q02": {
+    "refused": false,
+    "coverage": 1.0
+   },
+   "Q03": {
+    "refused": true,
+    "coverage": 0.424
+   },
+   "Q04": {
+    "refused": false,
+    "coverage": 0.59
+   },
+   "Q05": {
+    "refused": false,
+    "coverage": 0.512
+   },
+   "Q06": {
+    "refused": true,
+    "coverage": 0.22
+   },
+   "Q07": {
+    "refused": true,
+    "coverage": 0.195
+   },
+   "Q08": {
+    "refused": false,
+    "coverage": 0.77
+   },
+   "Q09": {
+    "refused": true,
+    "coverage": 0.356
+   },
+   "Q10": {
+    "refused": true,
+    "coverage": 0.253
+   },
+   "Q11": {
+    "refused": false,
+    "coverage": 0.584
+   },
+   "Q12": {
+    "refused": true,
+    "coverage": 0.384
+   },
+   "Q13": {
+    "refused": false,
+    "coverage": 0.692
+   },
+   "Q14": {
+    "refused": false,
+    "coverage": 1.0
+   },
+   "Q15": {
+    "refused": false,
+    "coverage": 0.506
+   },
+   "Q16": {
+    "refused": false,
+    "coverage": 0.719
+   },
+   "Q17": {
+    "refused": false,
+    "coverage": 1.0
+   },
+   "Q18": {
+    "refused": true,
+    "coverage": 0.246
+   },
+   "Q19": {
+    "refused": false,
+    "coverage": 0.741
+   },
+   "Q20": {
+    "refused": true,
+    "coverage": 0.309
+   },
+   "Q21": {
+    "refused": false,
+    "coverage": 0.45
+   },
+   "Q22": {
+    "refused": true,
+    "coverage": 0.411
+   },
+   "Q23": {
+    "refused": true,
+    "coverage": 0.248
+   },
+   "Q24": {
+    "refused": false,
+    "coverage": 1.0
+   },
+   "Q25": {
+    "refused": false,
+    "coverage": 0.666
+   },
+   "Q26": {
+    "refused": false,
+    "coverage": 0.651
+   },
+   "Q27": {
+    "refused": false,
+    "coverage": 1.0
+   },
+   "Q28": {
+    "refused": false,
+    "coverage": 1.0
+   },
+   "Q29": {
+    "refused": false,
+    "coverage": 0.487
+   },
+   "Q30": {
+    "refused": false,
+    "coverage": 0.735
+   },
+   "QT01": {
+    "refused": true,
+    "coverage": 0.381
+   },
+   "QT02": {
+    "refused": true,
+    "coverage": 0.193
+   },
+   "QT03": {
+    "refused": true,
+    "coverage": 0.275
+   },
+   "QT04": {
+    "refused": false,
+    "coverage": 0.683
+   },
+   "QT05": {
+    "refused": false,
+    "coverage": 0.464
+   },
+   "QT06": {
+    "refused": true,
+    "coverage": 0.314
+   },
+   "QT07": {
+    "refused": true,
+    "coverage": 0.365
+   },
+   "QT08": {
+    "refused": false,
+    "coverage": 0.493
+   },
+   "QT09": {
+    "refused": true,
+    "coverage": 0.169
+   },
+   "QT10": {
+    "refused": false,
+    "coverage": 0.655
+   }
+  }
+ },
+ "calib": {
+  "coverage": [
+   [
+    0.666,
+    "answerable"
+   ],
+   [
+    1.0,
+    "answerable"
+   ],
+   [
+    0.427,
+    "answerable"
+   ],
+   [
+    1.0,
+    "answerable"
+   ],
+   [
+    0.486,
+    "answerable"
+   ],
+   [
+    0.164,
+    "trap"
+   ],
+   [
+    0.603,
+    "trap"
+   ],
+   [
+    0.421,
+    "trap"
+   ],
+   [
+    0.561,
+    "trap"
+   ],
+   [
+    0.294,
+    "trap"
+   ]
+  ],
+  "best_threshold": 0.424,
+  "correct": 8,
+  "n": 10
+ },
+ "llm": {
+  "llm": "llamacpp:qwen2.5-3b-instruct-q4_k_m.gguf",
+  "answer_accuracy": 0.5333333333333333,
+  "trap_refusal": 0.9,
+  "false_refusal": 0.13333333333333333,
+  "p50_ms": 78101.20448599992,
+  "p95_ms": 92501.00375300008,
+  "rows": {
+   "Q01": {
+    "answer": "0,24 МПа [1]",
+    "refused": false,
+    "ok": true,
+    "ms": 100138
+   },
+   "Q02": {
+    "answer": "82 °C [5]",
+    "refused": false,
+    "ok": true,
+    "ms": 83111
+   },
+   "Q03": {
+    "answer": "Не знаю: в найденных документах ответа нет.",
+    "refused": true,
+    "ok": false,
+    "ms": 80115
+   },
+   "Q04": {
+    "answer": "50 МПа [1]",
+    "refused": false,
+    "ok": true,
+    "ms": 84008
+   },
+   "Q05": {
+    "answer": "104 °C [5]",
+    "refused": false,
+    "ok": true,
+    "ms": 92423
+   },
+   "Q06": {
+    "answer": "1",
+    "refused": false,
+    "ok": false,
+    "ms": 69846
+   },
+   "Q07": {
+    "answer": "5",
+    "refused": false,
+    "ok": true,
+    "ms": 79852
+   },
+   "Q08": {
+    "answer": "3",
+    "refused": false,
+    "ok": true,
+    "ms": 86556
+   },
+   "Q09": {
+    "answer": "1",
+    "refused": false,
+    "ok": false,
+    "ms": 85917
+   },
+   "Q10": {
+    "answer": "1. Не знаю: в найденных документах ответа нет.",
+    "refused": true,
+    "ok": false,
+    "ms": 78908
+   },
+   "Q11": {
+    "answer": "2 канал 4",
+    "refused": false,
+    "ok": false,
+    "ms": 90804
+   },
+   "Q12": {
+    "answer": "Не знаю: в найденных документах ответа нет.",
+    "refused": true,
+    "ok": false,
+    "ms": 89524
+   },
+   "Q13": {
+    "answer": "2 слот, 3 канал [2]",
+    "refused": false,
+    "ok": false,
+    "ms": 88813
+   },
+   "Q14": {
+    "answer": "1",
+    "refused": false,
+    "ok": false,
+    "ms": 81876
+   },
+   "Q15": {
+    "answer": "30001 [1]",
+    "refused": false,
+    "ok": true,
+    "ms": 85392
+   },
+   "Q16": {
+    "answer": "40005 [2]",
+    "refused": false,
+    "ok": false,
+    "ms": 69609
+   },
+   "Q17": {
+    "answer": "1",
+    "refused": false,
+    "ok": false,
+    "ms": 78415
+   },
+   "Q18": {
+    "answer": "192.168.17.50: [3]",
+    "refused": false,
+    "ok": true,
+    "ms": 77788
+   },
+   "Q19": {
+    "answer": "25 °C [3]",
+    "refused": false,
+    "ok": true,
+    "ms": 70846
+   },
+   "Q20": {
+    "answer": "Не знаю: в найденных документах ответа нет.",
+    "refused": true,
+    "ok": false,
+    "ms": 69888
+   },
+   "Q21": {
+    "answer": "10 мин [1]",
+    "refused": false,
+    "ok": false,
+    "ms": 74242
+   },
+   "Q22": {
+    "answer": "10 мин [4]",
+    "refused": false,
+    "ok": true,
+    "ms": 44709
+   },
+   "Q23": {
+    "answer": "12 месяцев [1]",
+    "refused": false,
+    "ok": true,
+    "ms": 92501
+   },
+   "Q24": {
+    "answer": "12 месяцев [1]",
+    "refused": false,
+    "ok": false,
+    "ms": 89972
+   },
+   "Q25": {
+    "answer": "1. [1]",
+    "refused": false,
+    "ok": false,
+    "ms": 65982
+   },
+   "Q26": {
+    "answer": "1.1 [4]",
+    "refused": false,
+    "ok": true,
+    "ms": 69618
+   },
+   "Q27": {
+    "answer": "Заключение: изделие не соответствует требованиям программы испытаний.",
+    "refused": false,
+    "ok": true,
+    "ms": 79588
+   },
+   "Q28": {
+    "answer": "22 МПа [2]",
+    "refused": false,
+    "ok": true,
+    "ms": 74165
+   },
+   "Q29": {
+    "answer": "90 мин. [1]",
+    "refused": false,
+    "ok": true,
+    "ms": 74607
+   },
+   "Q30": {
+    "answer": "E12 — обрыв линии аналогового входа (ток < 3,6 мА) [2]",
+    "refused": false,
+    "ok": true,
+    "ms": 73818
+   },
+   "QT01": {
+    "answer": "Не знаю: в найденных документах ответа нет.",
+    "refused": true,
+    "ok": true,
+    "ms": 71259
+   },
+   "QT02": {
+    "answer": "Не знаю: в найденных документах ответа нет.",
+    "refused": true,
+    "ok": true,
+    "ms": 87493
+   },
+   "QT03": {
+    "answer": "192.168.12.50 [1]",
+    "refused": false,
+    "ok": false,
+    "ms": 73807
+   },
+   "QT04": {
+    "answer": "Не знаю: в найденных документах ответа нет.",
+    "refused": true,
+    "ok": true,
+    "ms": 76006
+   },
+   "QT05": {
+    "answer": "Не знаю: в найденных документах ответа нет.",
+    "refused": true,
+    "ok": true,
+    "ms": 99284
+   },
+   "QT06": {
+    "answer": "Не знаю: в найденных документах ответа нет.",
+    "refused": true,
+    "ok": true,
+    "ms": 69149
+   },
+   "QT07": {
+    "answer": "Не знаю: в найденных документах ответа нет.",
+    "refused": true,
+    "ok": true,
+    "ms": 71504
+   },
+   "QT08": {
+    "answer": "Не знаю: в найденных документах ответа нет.",
+    "refused": true,
+    "ok": true,
+    "ms": 74208
+   },
+   "QT09": {
+    "answer": "Не знаю: в найденных документах ответа нет.",
+    "refused": true,
+    "ok": true,
+    "ms": 73907
+   },
+   "QT10": {
+    "answer": "Не знаю: в найденных документах ответа нет.",
+    "refused": true,
+    "ok": true,
+    "ms": 72248
+   }
+  }
+ },
+ "note": "Прогон 2: системный промпт v2 (сейчас включается LDR_PROMPT=v2, во время прогона был единственным в коде). Промпт менялся после просмотра ответов прогона 1 (results_2026-10-01.md), поэтому для этого промпта набор вопросов уже не «слепой». Модель та же: Qwen2.5-3B-Instruct Q4_K_M."
+}

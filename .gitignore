@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.venv/
+venv/
+
+# Индексы и модели — генерируются локально
+index/
+index_*/
+models/
+*.gguf
+*.onnx
+.cache/
+
+# Секреты и служебное
+.env
+.env.*
+*.log
+CLAUDE.md
+
+# ОС и редакторы
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+regen_tmp/

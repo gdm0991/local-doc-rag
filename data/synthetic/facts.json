@@ -1,0 +1,3557 @@
+{
+ "seed": 20261001,
+ "documents": 93,
+ "pdf_fallback_to_md": [],
+ "stands": [
+  {
+   "code": "ИС-3",
+   "slug": "is3",
+   "object": "масляных насосов",
+   "params": [
+    "P_OIL",
+    "P_OIL_IN",
+    "T_OIL",
+    "N_ROT",
+    "Q_OIL",
+    "I_MOT"
+   ],
+   "protocols": [
+    "ПИ-ИС-3-2024-073",
+    "ПИ-ИС-3-2024-120"
+   ]
+  },
+  {
+   "code": "ИС-5",
+   "slug": "is5",
+   "object": "топливных регуляторов",
+   "params": [
+    "P_FUEL",
+    "Q_FUEL",
+    "T_FUEL",
+    "N_ROT",
+    "P_OIL",
+    "I_MOT",
+    "V_BRG"
+   ],
+   "protocols": [
+    "ПИ-ИС-5-2025-070",
+    "ПИ-ИС-5-2025-115"
+   ]
+  },
+  {
+   "code": "ИС-7",
+   "slug": "is7",
+   "object": "редукторов",
+   "params": [
+    "N_ROT",
+    "M_TORQ",
+    "T_GEAR",
+    "P_OIL",
+    "T_OIL",
+    "V_BRG",
+    "I_MOT",
+    "Q_OIL"
+   ],
+   "protocols": [
+    "ПИ-ИС-7-2024-120",
+    "ПИ-ИС-7-2025-106"
+   ]
+  },
+  {
+   "code": "ИС-9",
+   "slug": "is9",
+   "object": "теплообменников",
+   "params": [
+    "T_W_IN",
+    "T_W_OUT",
+    "P_WATER",
+    "T_OIL",
+    "P_OIL",
+    "Q_OIL"
+   ],
+   "protocols": [
+    "ПИ-ИС-9-2024-048",
+    "ПИ-ИС-9-2024-073"
+   ]
+  },
+  {
+   "code": "ГС-2",
+   "slug": "gs2",
+   "object": "гидравлических клапанов",
+   "params": [
+    "P_HYD",
+    "T_HYD",
+    "Q_OIL",
+    "I_MOT"
+   ],
+   "protocols": [
+    "ПИ-ГС-2-2024-043",
+    "ПИ-ГС-2-2024-018"
+   ]
+  },
+  {
+   "code": "ГС-4",
+   "slug": "gs4",
+   "object": "трубопроводов на прочность",
+   "params": [
+    "P_TEST",
+    "P_HYD",
+    "T_HYD",
+    "I_MOT"
+   ],
+   "protocols": [
+    "ПИ-ГС-4-2024-034",
+    "ПИ-ГС-4-2024-080"
+   ]
+  },
+  {
+   "code": "ЭС-1",
+   "slug": "es1",
+   "object": "электродвигателей",
+   "params": [
+    "I_MOT",
+    "U_MOT",
+    "T_WIND",
+    "N_ROT",
+    "V_BRG",
+    "M_TORQ"
+   ],
+   "protocols": [
+    "ПИ-ЭС-1-2024-114",
+    "ПИ-ЭС-1-2025-077"
+   ]
+  },
+  {
+   "code": "ВС-6",
+   "slug": "vs6",
+   "object": "изделий на вибропрочность",
+   "params": [
+    "A_VIB",
+    "F_VIB",
+    "T_OIL",
+    "I_MOT",
+    "P_OIL"
+   ],
+   "protocols": [
+    "ПИ-ВС-6-2024-021",
+    "ПИ-ВС-6-2025-093"
+   ]
+  }
+ ],
+ "facts": {
+  "plc.К-210.slots": {
+   "value": "4",
+   "docs": [
+    "obshchie/k200_rukovodstvo_programmista.md"
+   ]
+  },
+  "plc.К-210.mem": {
+   "value": "256",
+   "docs": [
+    "obshchie/k200_rukovodstvo_programmista.md"
+   ]
+  },
+  "plc.К-220.slots": {
+   "value": "8",
+   "docs": [
+    "obshchie/k200_rukovodstvo_programmista.md"
+   ]
+  },
+  "plc.К-220.mem": {
+   "value": "1024",
+   "docs": [
+    "obshchie/k200_rukovodstvo_programmista.md"
+   ]
+  },
+  "plc.К-240.slots": {
+   "value": "16",
+   "docs": [
+    "obshchie/k200_rukovodstvo_programmista.md"
+   ]
+  },
+  "plc.К-240.mem": {
+   "value": "4096",
+   "docs": [
+    "obshchie/k200_rukovodstvo_programmista.md"
+   ]
+  },
+  "plc.err.E01": {
+   "value": "нет связи с модулем расширения",
+   "docs": [
+    "obshchie/k200_rukovodstvo_programmista.md"
+   ]
+  },
+  "plc.err.E04": {
+   "value": "ошибка контрольной суммы программы",
+   "docs": [
+    "obshchie/k200_rukovodstvo_programmista.md"
+   ]
+  },
+  "plc.err.E07": {
+   "value": "переполнение времени цикла",
+   "docs": [
+    "obshchie/k200_rukovodstvo_programmista.md"
+   ]
+  },
+  "plc.err.E12": {
+   "value": "обрыв линии аналогового входа (ток < 3,6 мА)",
+   "docs": [
+    "obshchie/k200_rukovodstvo_programmista.md"
+   ]
+  },
+  "plc.err.E13": {
+   "value": "превышение тока аналогового входа (ток > 21 мА)",
+   "docs": [
+    "obshchie/k200_rukovodstvo_programmista.md"
+   ]
+  },
+  "plc.err.E20": {
+   "value": "разряд батареи часов",
+   "docs": [
+    "obshchie/k200_rukovodstvo_programmista.md"
+   ]
+  },
+  "plc.err.E31": {
+   "value": "конфликт адресов Modbus",
+   "docs": [
+    "obshchie/k200_rukovodstvo_programmista.md"
+   ]
+  },
+  "plc.modbus_conn": {
+   "value": "8",
+   "docs": [
+    "obshchie/k200_rukovodstvo_programmista.md"
+   ]
+  },
+  "mod.МВА-8": {
+   "value": "8 аналоговых входов 4–20 мА, разрешение 16 бит, групповая гальваноразвязка",
+   "docs": [
+    "obshchie/moduli_k200.md"
+   ]
+  },
+  "mod.МВТ-8": {
+   "value": "8 входов термопар (типы K, L), компенсация холодного спая встроенная",
+   "docs": [
+    "obshchie/moduli_k200.md"
+   ]
+  },
+  "mod.МВД-16": {
+   "value": "16 дискретных входов =24 В, время фильтрации настраивается 1–20 мс",
+   "docs": [
+    "obshchie/moduli_k200.md"
+   ]
+  },
+  "mod.МВК-16": {
+   "value": "16 дискретных выходов, транзисторные, до 0,5 А на канал",
+   "docs": [
+    "obshchie/moduli_k200.md"
+   ]
+  },
+  "mod.МАВ-4": {
+   "value": "4 аналоговых выхода 4–20 мА",
+   "docs": [
+    "obshchie/moduli_k200.md"
+   ]
+  },
+  "sens.ДД-100": {
+   "value": "датчик избыточного давления, выход 4–20 мА, класс точности 0,25",
+   "docs": [
+    "obshchie/spravochnik_datchikov.md"
+   ]
+  },
+  "sens.ДД-250": {
+   "value": "датчик избыточного давления высокого диапазона, выход 4–20 мА, класс точности 0,5",
+   "docs": [
+    "obshchie/spravochnik_datchikov.md"
+   ]
+  },
+  "sens.ТП-К": {
+   "value": "термопара типа K (ХА), кабельная, диаметр 3 мм",
+   "docs": [
+    "obshchie/spravochnik_datchikov.md"
+   ]
+  },
+  "sens.ДЧ-3": {
+   "value": "датчик частоты вращения с преобразователем в 4–20 мА",
+   "docs": [
+    "obshchie/spravochnik_datchikov.md"
+   ]
+  },
+  "sens.РМ-40": {
+   "value": "расходомер с выходом 4–20 мА, погрешность 1 %",
+   "docs": [
+    "obshchie/spravochnik_datchikov.md"
+   ]
+  },
+  "sens.ТТ-5": {
+   "value": "преобразователь тока с выходом 4–20 мА",
+   "docs": [
+    "obshchie/spravochnik_datchikov.md"
+   ]
+  },
+  "sens.ДВ-20": {
+   "value": "датчик виброскорости с выходом 4–20 мА, диапазон 0–20 мм/с",
+   "docs": [
+    "obshchie/spravochnik_datchikov.md"
+   ]
+  },
+  "sens.ДМ-10": {
+   "value": "датчик крутящего момента с выходом 4–20 мА",
+   "docs": [
+    "obshchie/spravochnik_datchikov.md"
+   ]
+  },
+  "safety.min_staff": {
+   "value": "2",
+   "docs": [
+    "obshchie/trebovaniya_bezopasnosti.md"
+   ]
+  },
+  "is3.plc": {
+   "value": "К-210",
+   "docs": [
+    "is3/re_is3.md"
+   ]
+  },
+  "is3.ip": {
+   "value": "192.168.10.100",
+   "docs": [
+    "is3/re_is3.md",
+    "is3/modbus_karta_is3.md"
+   ]
+  },
+  "is3.P_OIL.alarm": {
+   "value": "0,24",
+   "docs": [
+    "is3/re_is3.md",
+    "is3/karta_ustavok_is3.md"
+   ],
+   "unit": "МПа",
+   "name": "Давление масла на выходе насоса"
+  },
+  "is3.P_OIL_IN.alarm": {
+   "value": "0,05",
+   "docs": [
+    "is3/re_is3.md",
+    "is3/karta_ustavok_is3.md"
+   ],
+   "unit": "МПа",
+   "name": "Давление масла на входе"
+  },
+  "is3.T_OIL.alarm": {
+   "value": "94",
+   "docs": [
+    "is3/re_is3.md",
+    "is3/karta_ustavok_is3.md"
+   ],
+   "unit": "°C",
+   "name": "Температура масла в баке"
+  },
+  "is3.P_OIL.channel": {
+   "value": "слот 2, канал 3",
+   "docs": [
+    "is3/perechen_signalov_is3.md"
+   ],
+   "name": "Давление масла на выходе насоса",
+   "module": "МВА-8"
+  },
+  "is3.P_OIL.sensor": {
+   "value": "ДД-100",
+   "docs": [
+    "is3/perechen_signalov_is3.md"
+   ],
+   "name": "Давление масла на выходе насоса"
+  },
+  "is3.P_OIL_IN.channel": {
+   "value": "слот 2, канал 4",
+   "docs": [
+    "is3/perechen_signalov_is3.md"
+   ],
+   "name": "Давление масла на входе",
+   "module": "МВА-8"
+  },
+  "is3.P_OIL_IN.sensor": {
+   "value": "ДД-100",
+   "docs": [
+    "is3/perechen_signalov_is3.md"
+   ],
+   "name": "Давление масла на входе"
+  },
+  "is3.N_ROT.channel": {
+   "value": "слот 2, канал 5",
+   "docs": [
+    "is3/perechen_signalov_is3.md"
+   ],
+   "name": "Частота вращения вала",
+   "module": "МВА-8"
+  },
+  "is3.N_ROT.sensor": {
+   "value": "ДЧ-3",
+   "docs": [
+    "is3/perechen_signalov_is3.md"
+   ],
+   "name": "Частота вращения вала"
+  },
+  "is3.Q_OIL.channel": {
+   "value": "слот 2, канал 6",
+   "docs": [
+    "is3/perechen_signalov_is3.md"
+   ],
+   "name": "Расход масла",
+   "module": "МВА-8"
+  },
+  "is3.Q_OIL.sensor": {
+   "value": "РМ-40",
+   "docs": [
+    "is3/perechen_signalov_is3.md"
+   ],
+   "name": "Расход масла"
+  },
+  "is3.I_MOT.channel": {
+   "value": "слот 2, канал 7",
+   "docs": [
+    "is3/perechen_signalov_is3.md"
+   ],
+   "name": "Ток двигателя привода",
+   "module": "МВА-8"
+  },
+  "is3.I_MOT.sensor": {
+   "value": "ТТ-5",
+   "docs": [
+    "is3/perechen_signalov_is3.md"
+   ],
+   "name": "Ток двигателя привода"
+  },
+  "is3.T_OIL.channel": {
+   "value": "слот 3, канал 1",
+   "docs": [
+    "is3/perechen_signalov_is3.md"
+   ],
+   "name": "Температура масла в баке",
+   "module": "МВТ-8"
+  },
+  "is3.T_OIL.sensor": {
+   "value": "ТП-К",
+   "docs": [
+    "is3/perechen_signalov_is3.md"
+   ],
+   "name": "Температура масла в баке"
+  },
+  "is3.estop": {
+   "value": "слот 4, канал 1",
+   "docs": [
+    "is3/perechen_signalov_is3.md",
+    "is3/instrukciya_avariynyy_ostanov_is3.md"
+   ]
+  },
+  "is3.P_OIL.warn": {
+   "value": "0,31",
+   "docs": [
+    "is3/karta_ustavok_is3.md"
+   ],
+   "unit": "МПа",
+   "name": "Давление масла на выходе насоса"
+  },
+  "is3.P_OIL.delay": {
+   "value": "1",
+   "docs": [
+    "is3/karta_ustavok_is3.md"
+   ],
+   "name": "Давление масла на выходе насоса"
+  },
+  "is3.P_OIL_IN.warn": {
+   "value": "0,08",
+   "docs": [
+    "is3/karta_ustavok_is3.md"
+   ],
+   "unit": "МПа",
+   "name": "Давление масла на входе"
+  },
+  "is3.P_OIL_IN.delay": {
+   "value": "5",
+   "docs": [
+    "is3/karta_ustavok_is3.md"
+   ],
+   "name": "Давление масла на входе"
+  },
+  "is3.T_OIL.warn": {
+   "value": "82",
+   "docs": [
+    "is3/karta_ustavok_is3.md"
+   ],
+   "unit": "°C",
+   "name": "Температура масла в баке"
+  },
+  "is3.T_OIL.delay": {
+   "value": "1",
+   "docs": [
+    "is3/karta_ustavok_is3.md"
+   ],
+   "name": "Температура масла в баке"
+  },
+  "is3.N_ROT.alarm": {
+   "value": "9850",
+   "docs": [
+    "is3/karta_ustavok_is3.md"
+   ],
+   "unit": "об/мин",
+   "name": "Частота вращения вала"
+  },
+  "is3.N_ROT.warn": {
+   "value": "8950",
+   "docs": [
+    "is3/karta_ustavok_is3.md"
+   ],
+   "unit": "об/мин",
+   "name": "Частота вращения вала"
+  },
+  "is3.N_ROT.delay": {
+   "value": "5",
+   "docs": [
+    "is3/karta_ustavok_is3.md"
+   ],
+   "name": "Частота вращения вала"
+  },
+  "is3.Q_OIL.alarm": {
+   "value": "30",
+   "docs": [
+    "is3/karta_ustavok_is3.md"
+   ],
+   "unit": "л/мин",
+   "name": "Расход масла"
+  },
+  "is3.Q_OIL.warn": {
+   "value": "41",
+   "docs": [
+    "is3/karta_ustavok_is3.md"
+   ],
+   "unit": "л/мин",
+   "name": "Расход масла"
+  },
+  "is3.Q_OIL.delay": {
+   "value": "1",
+   "docs": [
+    "is3/karta_ustavok_is3.md"
+   ],
+   "name": "Расход масла"
+  },
+  "is3.I_MOT.alarm": {
+   "value": "215",
+   "docs": [
+    "is3/karta_ustavok_is3.md"
+   ],
+   "unit": "А",
+   "name": "Ток двигателя привода"
+  },
+  "is3.I_MOT.warn": {
+   "value": "178",
+   "docs": [
+    "is3/karta_ustavok_is3.md"
+   ],
+   "unit": "А",
+   "name": "Ток двигателя привода"
+  },
+  "is3.I_MOT.delay": {
+   "value": "0,5",
+   "docs": [
+    "is3/karta_ustavok_is3.md"
+   ],
+   "name": "Ток двигателя привода"
+  },
+  "is3.min_oil_temp": {
+   "value": "30",
+   "docs": [
+    "is3/instrukciya_pusk_is3.txt"
+   ]
+  },
+  "is3.warmup": {
+   "value": "20",
+   "docs": [
+    "is3/instrukciya_pusk_is3.txt"
+   ]
+  },
+  "is3.restart_wait": {
+   "value": "10",
+   "docs": [
+    "is3/instrukciya_avariynyy_ostanov_is3.md"
+   ]
+  },
+  "is3.calib.давления": {
+   "value": "12",
+   "docs": [
+    "is3/metodika_kalibrovki_is3.md"
+   ]
+  },
+  "is3.calib.температуры": {
+   "value": "24",
+   "docs": [
+    "is3/metodika_kalibrovki_is3.md"
+   ]
+  },
+  "is3.calib.прочих аналоговых": {
+   "value": "12",
+   "docs": [
+    "is3/metodika_kalibrovki_is3.md"
+   ]
+  },
+  "is3.delay_change_ver": {
+   "value": "1.3",
+   "docs": [
+    "is3/zhurnal_po_plk_is3.md"
+   ],
+   "name": "Давление масла на входе",
+   "old": "3",
+   "new": "5"
+  },
+  "is3.last_ver": {
+   "value": "1.3",
+   "docs": [
+    "is3/zhurnal_po_plk_is3.md"
+   ],
+   "date": "07.04.2025"
+  },
+  "is3.filter_hours": {
+   "value": "250",
+   "docs": [
+    "is3/reglament_to_is3.md"
+   ]
+  },
+  "is3.unit_id": {
+   "value": "4",
+   "docs": [
+    "is3/modbus_karta_is3.md"
+   ]
+  },
+  "is3.P_OIL.modbus": {
+   "value": "30001",
+   "docs": [
+    "is3/modbus_karta_is3.md"
+   ],
+   "name": "Давление масла на выходе насоса"
+  },
+  "is3.P_OIL_IN.modbus": {
+   "value": "30003",
+   "docs": [
+    "is3/modbus_karta_is3.md"
+   ],
+   "name": "Давление масла на входе"
+  },
+  "is3.N_ROT.modbus": {
+   "value": "30005",
+   "docs": [
+    "is3/modbus_karta_is3.md"
+   ],
+   "name": "Частота вращения вала"
+  },
+  "is3.Q_OIL.modbus": {
+   "value": "30007",
+   "docs": [
+    "is3/modbus_karta_is3.md"
+   ],
+   "name": "Расход масла"
+  },
+  "is3.I_MOT.modbus": {
+   "value": "30009",
+   "docs": [
+    "is3/modbus_karta_is3.md"
+   ],
+   "name": "Ток двигателя привода"
+  },
+  "is3.T_OIL.modbus": {
+   "value": "30011",
+   "docs": [
+    "is3/modbus_karta_is3.md"
+   ],
+   "name": "Температура масла в баке"
+  },
+  "proto.ПИ-ИС-3-2024-073.result": {
+   "value": "соответствует",
+   "docs": [
+    "is3/protokol_1_is3.pdf"
+   ],
+   "stand": "ИС-3"
+  },
+  "proto.ПИ-ИС-3-2024-073.serial": {
+   "value": "33439",
+   "docs": [
+    "is3/protokol_1_is3.pdf"
+   ],
+   "stand": "ИС-3"
+  },
+  "proto.ПИ-ИС-3-2024-073.mode2": {
+   "value": "0,83",
+   "docs": [
+    "is3/protokol_1_is3.pdf"
+   ],
+   "stand": "ИС-3",
+   "unit": "МПа",
+   "param": "Давление масла на выходе насоса"
+  },
+  "proto.ПИ-ИС-3-2024-073.duration": {
+   "value": "30",
+   "docs": [
+    "is3/protokol_1_is3.pdf"
+   ],
+   "stand": "ИС-3"
+  },
+  "proto.ПИ-ИС-3-2024-120.result": {
+   "value": "соответствует",
+   "docs": [
+    "is3/protokol_2_is3.pdf"
+   ],
+   "stand": "ИС-3"
+  },
+  "proto.ПИ-ИС-3-2024-120.serial": {
+   "value": "33558",
+   "docs": [
+    "is3/protokol_2_is3.pdf"
+   ],
+   "stand": "ИС-3"
+  },
+  "proto.ПИ-ИС-3-2024-120.mode2": {
+   "value": "0,83",
+   "docs": [
+    "is3/protokol_2_is3.pdf"
+   ],
+   "stand": "ИС-3",
+   "unit": "МПа",
+   "param": "Давление масла на выходе насоса"
+  },
+  "proto.ПИ-ИС-3-2024-120.duration": {
+   "value": "120",
+   "docs": [
+    "is3/protokol_2_is3.pdf"
+   ],
+   "stand": "ИС-3"
+  },
+  "is5.plc": {
+   "value": "К-220",
+   "docs": [
+    "is5/re_is5.md"
+   ]
+  },
+  "is5.ip": {
+   "value": "192.168.11.50",
+   "docs": [
+    "is5/re_is5.md",
+    "is5/modbus_karta_is5.md"
+   ]
+  },
+  "is5.P_FUEL.alarm": {
+   "value": "8,2",
+   "docs": [
+    "is5/re_is5.md",
+    "is5/karta_ustavok_is5.md"
+   ],
+   "unit": "МПа",
+   "name": "Давление топлива на входе регулятора"
+  },
+  "is5.Q_FUEL.alarm": {
+   "value": "50",
+   "docs": [
+    "is5/re_is5.md",
+    "is5/karta_ustavok_is5.md"
+   ],
+   "unit": "л/мин",
+   "name": "Расход топлива"
+  },
+  "is5.T_FUEL.alarm": {
+   "value": "82",
+   "docs": [
+    "is5/re_is5.md",
+    "is5/karta_ustavok_is5.md"
+   ],
+   "unit": "°C",
+   "name": "Температура топлива"
+  },
+  "is5.P_FUEL.channel": {
+   "value": "слот 2, канал 1",
+   "docs": [
+    "is5/perechen_signalov_is5.md"
+   ],
+   "name": "Давление топлива на входе регулятора",
+   "module": "МВА-8"
+  },
+  "is5.P_FUEL.sensor": {
+   "value": "ДД-250",
+   "docs": [
+    "is5/perechen_signalov_is5.md"
+   ],
+   "name": "Давление топлива на входе регулятора"
+  },
+  "is5.Q_FUEL.channel": {
+   "value": "слот 2, канал 2",
+   "docs": [
+    "is5/perechen_signalov_is5.md"
+   ],
+   "name": "Расход топлива",
+   "module": "МВА-8"
+  },
+  "is5.Q_FUEL.sensor": {
+   "value": "РМ-40",
+   "docs": [
+    "is5/perechen_signalov_is5.md"
+   ],
+   "name": "Расход топлива"
+  },
+  "is5.N_ROT.channel": {
+   "value": "слот 2, канал 3",
+   "docs": [
+    "is5/perechen_signalov_is5.md"
+   ],
+   "name": "Частота вращения вала",
+   "module": "МВА-8"
+  },
+  "is5.N_ROT.sensor": {
+   "value": "ДЧ-3",
+   "docs": [
+    "is5/perechen_signalov_is5.md"
+   ],
+   "name": "Частота вращения вала"
+  },
+  "is5.P_OIL.channel": {
+   "value": "слот 2, канал 4",
+   "docs": [
+    "is5/perechen_signalov_is5.md"
+   ],
+   "name": "Давление масла на выходе насоса",
+   "module": "МВА-8"
+  },
+  "is5.P_OIL.sensor": {
+   "value": "ДД-100",
+   "docs": [
+    "is5/perechen_signalov_is5.md"
+   ],
+   "name": "Давление масла на выходе насоса"
+  },
+  "is5.I_MOT.channel": {
+   "value": "слот 2, канал 5",
+   "docs": [
+    "is5/perechen_signalov_is5.md"
+   ],
+   "name": "Ток двигателя привода",
+   "module": "МВА-8"
+  },
+  "is5.I_MOT.sensor": {
+   "value": "ТТ-5",
+   "docs": [
+    "is5/perechen_signalov_is5.md"
+   ],
+   "name": "Ток двигателя привода"
+  },
+  "is5.V_BRG.channel": {
+   "value": "слот 2, канал 6",
+   "docs": [
+    "is5/perechen_signalov_is5.md"
+   ],
+   "name": "Виброскорость опоры подшипника",
+   "module": "МВА-8"
+  },
+  "is5.V_BRG.sensor": {
+   "value": "ДВ-20",
+   "docs": [
+    "is5/perechen_signalov_is5.md"
+   ],
+   "name": "Виброскорость опоры подшипника"
+  },
+  "is5.T_FUEL.channel": {
+   "value": "слот 3, канал 1",
+   "docs": [
+    "is5/perechen_signalov_is5.md"
+   ],
+   "name": "Температура топлива",
+   "module": "МВТ-8"
+  },
+  "is5.T_FUEL.sensor": {
+   "value": "ТП-К",
+   "docs": [
+    "is5/perechen_signalov_is5.md"
+   ],
+   "name": "Температура топлива"
+  },
+  "is5.estop": {
+   "value": "слот 4, канал 2",
+   "docs": [
+    "is5/perechen_signalov_is5.md",
+    "is5/instrukciya_avariynyy_ostanov_is5.md"
+   ]
+  },
+  "is5.P_FUEL.warn": {
+   "value": "7,5",
+   "docs": [
+    "is5/karta_ustavok_is5.md"
+   ],
+   "unit": "МПа",
+   "name": "Давление топлива на входе регулятора"
+  },
+  "is5.P_FUEL.delay": {
+   "value": "3",
+   "docs": [
+    "is5/karta_ustavok_is5.md"
+   ],
+   "name": "Давление топлива на входе регулятора"
+  },
+  "is5.Q_FUEL.warn": {
+   "value": "43",
+   "docs": [
+    "is5/karta_ustavok_is5.md"
+   ],
+   "unit": "л/мин",
+   "name": "Расход топлива"
+  },
+  "is5.Q_FUEL.delay": {
+   "value": "1",
+   "docs": [
+    "is5/karta_ustavok_is5.md"
+   ],
+   "name": "Расход топлива"
+  },
+  "is5.T_FUEL.warn": {
+   "value": "73",
+   "docs": [
+    "is5/karta_ustavok_is5.md"
+   ],
+   "unit": "°C",
+   "name": "Температура топлива"
+  },
+  "is5.T_FUEL.delay": {
+   "value": "2",
+   "docs": [
+    "is5/karta_ustavok_is5.md"
+   ],
+   "name": "Температура топлива"
+  },
+  "is5.N_ROT.alarm": {
+   "value": "10200",
+   "docs": [
+    "is5/karta_ustavok_is5.md"
+   ],
+   "unit": "об/мин",
+   "name": "Частота вращения вала"
+  },
+  "is5.N_ROT.warn": {
+   "value": "9150",
+   "docs": [
+    "is5/karta_ustavok_is5.md"
+   ],
+   "unit": "об/мин",
+   "name": "Частота вращения вала"
+  },
+  "is5.N_ROT.delay": {
+   "value": "2",
+   "docs": [
+    "is5/karta_ustavok_is5.md"
+   ],
+   "name": "Частота вращения вала"
+  },
+  "is5.P_OIL.alarm": {
+   "value": "0,26",
+   "docs": [
+    "is5/karta_ustavok_is5.md"
+   ],
+   "unit": "МПа",
+   "name": "Давление масла на выходе насоса"
+  },
+  "is5.P_OIL.warn": {
+   "value": "0,3",
+   "docs": [
+    "is5/karta_ustavok_is5.md"
+   ],
+   "unit": "МПа",
+   "name": "Давление масла на выходе насоса"
+  },
+  "is5.P_OIL.delay": {
+   "value": "1",
+   "docs": [
+    "is5/karta_ustavok_is5.md"
+   ],
+   "name": "Давление масла на выходе насоса"
+  },
+  "is5.I_MOT.alarm": {
+   "value": "204",
+   "docs": [
+    "is5/karta_ustavok_is5.md"
+   ],
+   "unit": "А",
+   "name": "Ток двигателя привода"
+  },
+  "is5.I_MOT.warn": {
+   "value": "173",
+   "docs": [
+    "is5/karta_ustavok_is5.md"
+   ],
+   "unit": "А",
+   "name": "Ток двигателя привода"
+  },
+  "is5.I_MOT.delay": {
+   "value": "0,5",
+   "docs": [
+    "is5/karta_ustavok_is5.md"
+   ],
+   "name": "Ток двигателя привода"
+  },
+  "is5.V_BRG.alarm": {
+   "value": "11,5",
+   "docs": [
+    "is5/karta_ustavok_is5.md"
+   ],
+   "unit": "мм/с",
+   "name": "Виброскорость опоры подшипника"
+  },
+  "is5.V_BRG.warn": {
+   "value": "7,1",
+   "docs": [
+    "is5/karta_ustavok_is5.md"
+   ],
+   "unit": "мм/с",
+   "name": "Виброскорость опоры подшипника"
+  },
+  "is5.V_BRG.delay": {
+   "value": "1",
+   "docs": [
+    "is5/karta_ustavok_is5.md"
+   ],
+   "name": "Виброскорость опоры подшипника"
+  },
+  "is5.min_oil_temp": {
+   "value": "15",
+   "docs": [
+    "is5/instrukciya_pusk_is5.txt"
+   ]
+  },
+  "is5.warmup": {
+   "value": "10",
+   "docs": [
+    "is5/instrukciya_pusk_is5.txt"
+   ]
+  },
+  "is5.restart_wait": {
+   "value": "10",
+   "docs": [
+    "is5/instrukciya_avariynyy_ostanov_is5.md"
+   ]
+  },
+  "is5.calib.давления": {
+   "value": "6",
+   "docs": [
+    "is5/metodika_kalibrovki_is5.md"
+   ]
+  },
+  "is5.calib.температуры": {
+   "value": "24",
+   "docs": [
+    "is5/metodika_kalibrovki_is5.md"
+   ]
+  },
+  "is5.calib.прочих аналоговых": {
+   "value": "24",
+   "docs": [
+    "is5/metodika_kalibrovki_is5.md"
+   ]
+  },
+  "is5.delay_change_ver": {
+   "value": "1.1",
+   "docs": [
+    "is5/zhurnal_po_plk_is5.md"
+   ],
+   "name": "Расход топлива",
+   "old": "5",
+   "new": "1"
+  },
+  "is5.last_ver": {
+   "value": "1.2",
+   "docs": [
+    "is5/zhurnal_po_plk_is5.md"
+   ],
+   "date": "15.05.2025"
+  },
+  "is5.filter_hours": {
+   "value": "500",
+   "docs": [
+    "is5/reglament_to_is5.md"
+   ]
+  },
+  "is5.unit_id": {
+   "value": "15",
+   "docs": [
+    "is5/modbus_karta_is5.md"
+   ]
+  },
+  "is5.P_FUEL.modbus": {
+   "value": "30001",
+   "docs": [
+    "is5/modbus_karta_is5.md"
+   ],
+   "name": "Давление топлива на входе регулятора"
+  },
+  "is5.Q_FUEL.modbus": {
+   "value": "30003",
+   "docs": [
+    "is5/modbus_karta_is5.md"
+   ],
+   "name": "Расход топлива"
+  },
+  "is5.N_ROT.modbus": {
+   "value": "30005",
+   "docs": [
+    "is5/modbus_karta_is5.md"
+   ],
+   "name": "Частота вращения вала"
+  },
+  "is5.P_OIL.modbus": {
+   "value": "30007",
+   "docs": [
+    "is5/modbus_karta_is5.md"
+   ],
+   "name": "Давление масла на выходе насоса"
+  },
+  "is5.I_MOT.modbus": {
+   "value": "30009",
+   "docs": [
+    "is5/modbus_karta_is5.md"
+   ],
+   "name": "Ток двигателя привода"
+  },
+  "is5.V_BRG.modbus": {
+   "value": "30011",
+   "docs": [
+    "is5/modbus_karta_is5.md"
+   ],
+   "name": "Виброскорость опоры подшипника"
+  },
+  "is5.T_FUEL.modbus": {
+   "value": "30013",
+   "docs": [
+    "is5/modbus_karta_is5.md"
+   ],
+   "name": "Температура топлива"
+  },
+  "proto.ПИ-ИС-5-2025-070.result": {
+   "value": "соответствует",
+   "docs": [
+    "is5/protokol_1_is5.md"
+   ],
+   "stand": "ИС-5"
+  },
+  "proto.ПИ-ИС-5-2025-070.serial": {
+   "value": "17744",
+   "docs": [
+    "is5/protokol_1_is5.md"
+   ],
+   "stand": "ИС-5"
+  },
+  "proto.ПИ-ИС-5-2025-070.mode2": {
+   "value": "5,15",
+   "docs": [
+    "is5/protokol_1_is5.md"
+   ],
+   "stand": "ИС-5",
+   "unit": "МПа",
+   "param": "Давление топлива на входе регулятора"
+  },
+  "proto.ПИ-ИС-5-2025-070.duration": {
+   "value": "30",
+   "docs": [
+    "is5/protokol_1_is5.md"
+   ],
+   "stand": "ИС-5"
+  },
+  "proto.ПИ-ИС-5-2025-115.result": {
+   "value": "соответствует",
+   "docs": [
+    "is5/protokol_2_is5.md"
+   ],
+   "stand": "ИС-5"
+  },
+  "proto.ПИ-ИС-5-2025-115.serial": {
+   "value": "17303",
+   "docs": [
+    "is5/protokol_2_is5.md"
+   ],
+   "stand": "ИС-5"
+  },
+  "proto.ПИ-ИС-5-2025-115.mode2": {
+   "value": "5,3",
+   "docs": [
+    "is5/protokol_2_is5.md"
+   ],
+   "stand": "ИС-5",
+   "unit": "МПа",
+   "param": "Давление топлива на входе регулятора"
+  },
+  "proto.ПИ-ИС-5-2025-115.duration": {
+   "value": "90",
+   "docs": [
+    "is5/protokol_2_is5.md"
+   ],
+   "stand": "ИС-5"
+  },
+  "is7.plc": {
+   "value": "К-240",
+   "docs": [
+    "is7/re_is7.md"
+   ]
+  },
+  "is7.ip": {
+   "value": "192.168.12.50",
+   "docs": [
+    "is7/re_is7.md",
+    "is7/modbus_karta_is7.md"
+   ]
+  },
+  "is7.N_ROT.alarm": {
+   "value": "10550",
+   "docs": [
+    "is7/re_is7.md",
+    "is7/karta_ustavok_is7.md"
+   ],
+   "unit": "об/мин",
+   "name": "Частота вращения вала"
+  },
+  "is7.M_TORQ.alarm": {
+   "value": "1700",
+   "docs": [
+    "is7/re_is7.md",
+    "is7/karta_ustavok_is7.md"
+   ],
+   "unit": "Н·м",
+   "name": "Крутящий момент на входном валу"
+  },
+  "is7.T_GEAR.alarm": {
+   "value": "104",
+   "docs": [
+    "is7/re_is7.md",
+    "is7/karta_ustavok_is7.md"
+   ],
+   "unit": "°C",
+   "name": "Температура масла в картере редуктора"
+  },
+  "is7.N_ROT.channel": {
+   "value": "слот 2, канал 2",
+   "docs": [
+    "is7/perechen_signalov_is7.md"
+   ],
+   "name": "Частота вращения вала",
+   "module": "МВА-8"
+  },
+  "is7.N_ROT.sensor": {
+   "value": "ДЧ-3",
+   "docs": [
+    "is7/perechen_signalov_is7.md"
+   ],
+   "name": "Частота вращения вала"
+  },
+  "is7.M_TORQ.channel": {
+   "value": "слот 2, канал 3",
+   "docs": [
+    "is7/perechen_signalov_is7.md"
+   ],
+   "name": "Крутящий момент на входном валу",
+   "module": "МВА-8"
+  },
+  "is7.M_TORQ.sensor": {
+   "value": "ДМ-10",
+   "docs": [
+    "is7/perechen_signalov_is7.md"
+   ],
+   "name": "Крутящий момент на входном валу"
+  },
+  "is7.P_OIL.channel": {
+   "value": "слот 2, канал 4",
+   "docs": [
+    "is7/perechen_signalov_is7.md"
+   ],
+   "name": "Давление масла на выходе насоса",
+   "module": "МВА-8"
+  },
+  "is7.P_OIL.sensor": {
+   "value": "ДД-100",
+   "docs": [
+    "is7/perechen_signalov_is7.md"
+   ],
+   "name": "Давление масла на выходе насоса"
+  },
+  "is7.V_BRG.channel": {
+   "value": "слот 2, канал 5",
+   "docs": [
+    "is7/perechen_signalov_is7.md"
+   ],
+   "name": "Виброскорость опоры подшипника",
+   "module": "МВА-8"
+  },
+  "is7.V_BRG.sensor": {
+   "value": "ДВ-20",
+   "docs": [
+    "is7/perechen_signalov_is7.md"
+   ],
+   "name": "Виброскорость опоры подшипника"
+  },
+  "is7.I_MOT.channel": {
+   "value": "слот 2, канал 6",
+   "docs": [
+    "is7/perechen_signalov_is7.md"
+   ],
+   "name": "Ток двигателя привода",
+   "module": "МВА-8"
+  },
+  "is7.I_MOT.sensor": {
+   "value": "ТТ-5",
+   "docs": [
+    "is7/perechen_signalov_is7.md"
+   ],
+   "name": "Ток двигателя привода"
+  },
+  "is7.Q_OIL.channel": {
+   "value": "слот 2, канал 7",
+   "docs": [
+    "is7/perechen_signalov_is7.md"
+   ],
+   "name": "Расход масла",
+   "module": "МВА-8"
+  },
+  "is7.Q_OIL.sensor": {
+   "value": "РМ-40",
+   "docs": [
+    "is7/perechen_signalov_is7.md"
+   ],
+   "name": "Расход масла"
+  },
+  "is7.T_GEAR.channel": {
+   "value": "слот 3, канал 1",
+   "docs": [
+    "is7/perechen_signalov_is7.md"
+   ],
+   "name": "Температура масла в картере редуктора",
+   "module": "МВТ-8"
+  },
+  "is7.T_GEAR.sensor": {
+   "value": "ТП-К",
+   "docs": [
+    "is7/perechen_signalov_is7.md"
+   ],
+   "name": "Температура масла в картере редуктора"
+  },
+  "is7.T_OIL.channel": {
+   "value": "слот 3, канал 2",
+   "docs": [
+    "is7/perechen_signalov_is7.md"
+   ],
+   "name": "Температура масла в баке",
+   "module": "МВТ-8"
+  },
+  "is7.T_OIL.sensor": {
+   "value": "ТП-К",
+   "docs": [
+    "is7/perechen_signalov_is7.md"
+   ],
+   "name": "Температура масла в баке"
+  },
+  "is7.estop": {
+   "value": "слот 4, канал 3",
+   "docs": [
+    "is7/perechen_signalov_is7.md",
+    "is7/instrukciya_avariynyy_ostanov_is7.md"
+   ]
+  },
+  "is7.N_ROT.warn": {
+   "value": "9600",
+   "docs": [
+    "is7/karta_ustavok_is7.md"
+   ],
+   "unit": "об/мин",
+   "name": "Частота вращения вала"
+  },
+  "is7.N_ROT.delay": {
+   "value": "3",
+   "docs": [
+    "is7/karta_ustavok_is7.md"
+   ],
+   "name": "Частота вращения вала"
+  },
+  "is7.M_TORQ.warn": {
+   "value": "1600",
+   "docs": [
+    "is7/karta_ustavok_is7.md"
+   ],
+   "unit": "Н·м",
+   "name": "Крутящий момент на входном валу"
+  },
+  "is7.M_TORQ.delay": {
+   "value": "1",
+   "docs": [
+    "is7/karta_ustavok_is7.md"
+   ],
+   "name": "Крутящий момент на входном валу"
+  },
+  "is7.T_GEAR.warn": {
+   "value": "87",
+   "docs": [
+    "is7/karta_ustavok_is7.md"
+   ],
+   "unit": "°C",
+   "name": "Температура масла в картере редуктора"
+  },
+  "is7.T_GEAR.delay": {
+   "value": "1",
+   "docs": [
+    "is7/karta_ustavok_is7.md"
+   ],
+   "name": "Температура масла в картере редуктора"
+  },
+  "is7.P_OIL.alarm": {
+   "value": "0,26",
+   "docs": [
+    "is7/karta_ustavok_is7.md"
+   ],
+   "unit": "МПа",
+   "name": "Давление масла на выходе насоса"
+  },
+  "is7.P_OIL.warn": {
+   "value": "0,29",
+   "docs": [
+    "is7/karta_ustavok_is7.md"
+   ],
+   "unit": "МПа",
+   "name": "Давление масла на выходе насоса"
+  },
+  "is7.P_OIL.delay": {
+   "value": "3",
+   "docs": [
+    "is7/karta_ustavok_is7.md"
+   ],
+   "name": "Давление масла на выходе насоса"
+  },
+  "is7.T_OIL.alarm": {
+   "value": "97",
+   "docs": [
+    "is7/karta_ustavok_is7.md"
+   ],
+   "unit": "°C",
+   "name": "Температура масла в баке"
+  },
+  "is7.T_OIL.warn": {
+   "value": "81",
+   "docs": [
+    "is7/karta_ustavok_is7.md"
+   ],
+   "unit": "°C",
+   "name": "Температура масла в баке"
+  },
+  "is7.T_OIL.delay": {
+   "value": "1",
+   "docs": [
+    "is7/karta_ustavok_is7.md"
+   ],
+   "name": "Температура масла в баке"
+  },
+  "is7.V_BRG.alarm": {
+   "value": "10,9",
+   "docs": [
+    "is7/karta_ustavok_is7.md"
+   ],
+   "unit": "мм/с",
+   "name": "Виброскорость опоры подшипника"
+  },
+  "is7.V_BRG.warn": {
+   "value": "7",
+   "docs": [
+    "is7/karta_ustavok_is7.md"
+   ],
+   "unit": "мм/с",
+   "name": "Виброскорость опоры подшипника"
+  },
+  "is7.V_BRG.delay": {
+   "value": "0,5",
+   "docs": [
+    "is7/karta_ustavok_is7.md"
+   ],
+   "name": "Виброскорость опоры подшипника"
+  },
+  "is7.I_MOT.alarm": {
+   "value": "216",
+   "docs": [
+    "is7/karta_ustavok_is7.md"
+   ],
+   "unit": "А",
+   "name": "Ток двигателя привода"
+  },
+  "is7.I_MOT.warn": {
+   "value": "176",
+   "docs": [
+    "is7/karta_ustavok_is7.md"
+   ],
+   "unit": "А",
+   "name": "Ток двигателя привода"
+  },
+  "is7.I_MOT.delay": {
+   "value": "2",
+   "docs": [
+    "is7/karta_ustavok_is7.md"
+   ],
+   "name": "Ток двигателя привода"
+  },
+  "is7.Q_OIL.alarm": {
+   "value": "31",
+   "docs": [
+    "is7/karta_ustavok_is7.md"
+   ],
+   "unit": "л/мин",
+   "name": "Расход масла"
+  },
+  "is7.Q_OIL.warn": {
+   "value": "42",
+   "docs": [
+    "is7/karta_ustavok_is7.md"
+   ],
+   "unit": "л/мин",
+   "name": "Расход масла"
+  },
+  "is7.Q_OIL.delay": {
+   "value": "0,5",
+   "docs": [
+    "is7/karta_ustavok_is7.md"
+   ],
+   "name": "Расход масла"
+  },
+  "is7.min_oil_temp": {
+   "value": "25",
+   "docs": [
+    "is7/instrukciya_pusk_is7.txt"
+   ]
+  },
+  "is7.warmup": {
+   "value": "20",
+   "docs": [
+    "is7/instrukciya_pusk_is7.txt"
+   ]
+  },
+  "is7.restart_wait": {
+   "value": "10",
+   "docs": [
+    "is7/instrukciya_avariynyy_ostanov_is7.md"
+   ]
+  },
+  "is7.calib.давления": {
+   "value": "6",
+   "docs": [
+    "is7/metodika_kalibrovki_is7.md"
+   ]
+  },
+  "is7.calib.температуры": {
+   "value": "12",
+   "docs": [
+    "is7/metodika_kalibrovki_is7.md"
+   ]
+  },
+  "is7.calib.прочих аналоговых": {
+   "value": "12",
+   "docs": [
+    "is7/metodika_kalibrovki_is7.md"
+   ]
+  },
+  "is7.delay_change_ver": {
+   "value": "1.1",
+   "docs": [
+    "is7/zhurnal_po_plk_is7.md"
+   ],
+   "name": "Расход масла",
+   "old": "5",
+   "new": "0,5"
+  },
+  "is7.last_ver": {
+   "value": "1.2",
+   "docs": [
+    "is7/zhurnal_po_plk_is7.md"
+   ],
+   "date": "22.09.2024"
+  },
+  "is7.filter_hours": {
+   "value": "500",
+   "docs": [
+    "is7/reglament_to_is7.md"
+   ]
+  },
+  "is7.unit_id": {
+   "value": "12",
+   "docs": [
+    "is7/modbus_karta_is7.md"
+   ]
+  },
+  "is7.N_ROT.modbus": {
+   "value": "30001",
+   "docs": [
+    "is7/modbus_karta_is7.md"
+   ],
+   "name": "Частота вращения вала"
+  },
+  "is7.M_TORQ.modbus": {
+   "value": "30003",
+   "docs": [
+    "is7/modbus_karta_is7.md"
+   ],
+   "name": "Крутящий момент на входном валу"
+  },
+  "is7.P_OIL.modbus": {
+   "value": "30005",
+   "docs": [
+    "is7/modbus_karta_is7.md"
+   ],
+   "name": "Давление масла на выходе насоса"
+  },
+  "is7.V_BRG.modbus": {
+   "value": "30007",
+   "docs": [
+    "is7/modbus_karta_is7.md"
+   ],
+   "name": "Виброскорость опоры подшипника"
+  },
+  "is7.I_MOT.modbus": {
+   "value": "30009",
+   "docs": [
+    "is7/modbus_karta_is7.md"
+   ],
+   "name": "Ток двигателя привода"
+  },
+  "is7.Q_OIL.modbus": {
+   "value": "30011",
+   "docs": [
+    "is7/modbus_karta_is7.md"
+   ],
+   "name": "Расход масла"
+  },
+  "is7.T_GEAR.modbus": {
+   "value": "30013",
+   "docs": [
+    "is7/modbus_karta_is7.md"
+   ],
+   "name": "Температура масла в картере редуктора"
+  },
+  "is7.T_OIL.modbus": {
+   "value": "30015",
+   "docs": [
+    "is7/modbus_karta_is7.md"
+   ],
+   "name": "Температура масла в баке"
+  },
+  "proto.ПИ-ИС-7-2024-120.result": {
+   "value": "соответствует",
+   "docs": [
+    "is7/protokol_1_is7.pdf"
+   ],
+   "stand": "ИС-7"
+  },
+  "proto.ПИ-ИС-7-2024-120.serial": {
+   "value": "32350",
+   "docs": [
+    "is7/protokol_1_is7.pdf"
+   ],
+   "stand": "ИС-7"
+  },
+  "proto.ПИ-ИС-7-2024-120.mode2": {
+   "value": "6397",
+   "docs": [
+    "is7/protokol_1_is7.pdf"
+   ],
+   "stand": "ИС-7",
+   "unit": "об/мин",
+   "param": "Частота вращения вала"
+  },
+  "proto.ПИ-ИС-7-2024-120.duration": {
+   "value": "30",
+   "docs": [
+    "is7/protokol_1_is7.pdf"
+   ],
+   "stand": "ИС-7"
+  },
+  "proto.ПИ-ИС-7-2025-106.result": {
+   "value": "не соответствует",
+   "docs": [
+    "is7/protokol_2_is7.pdf"
+   ],
+   "stand": "ИС-7"
+  },
+  "proto.ПИ-ИС-7-2025-106.serial": {
+   "value": "32150",
+   "docs": [
+    "is7/protokol_2_is7.pdf"
+   ],
+   "stand": "ИС-7"
+  },
+  "proto.ПИ-ИС-7-2025-106.mode2": {
+   "value": "6333",
+   "docs": [
+    "is7/protokol_2_is7.pdf"
+   ],
+   "stand": "ИС-7",
+   "unit": "об/мин",
+   "param": "Частота вращения вала"
+  },
+  "proto.ПИ-ИС-7-2025-106.duration": {
+   "value": "90",
+   "docs": [
+    "is7/protokol_2_is7.pdf"
+   ],
+   "stand": "ИС-7"
+  },
+  "is9.plc": {
+   "value": "К-220",
+   "docs": [
+    "is9/re_is9.md"
+   ]
+  },
+  "is9.ip": {
+   "value": "192.168.13.50",
+   "docs": [
+    "is9/re_is9.md",
+    "is9/modbus_karta_is9.md"
+   ]
+  },
+  "is9.T_W_IN.alarm": {
+   "value": "68",
+   "docs": [
+    "is9/re_is9.md",
+    "is9/karta_ustavok_is9.md"
+   ],
+   "unit": "°C",
+   "name": "Температура воды на входе теплообменника"
+  },
+  "is9.T_W_OUT.alarm": {
+   "value": "89",
+   "docs": [
+    "is9/re_is9.md",
+    "is9/karta_ustavok_is9.md"
+   ],
+   "unit": "°C",
+   "name": "Температура воды на выходе теплообменника"
+  },
+  "is9.P_WATER.alarm": {
+   "value": "1,23",
+   "docs": [
+    "is9/re_is9.md",
+    "is9/karta_ustavok_is9.md"
+   ],
+   "unit": "МПа",
+   "name": "Давление воды в контуре"
+  },
+  "is9.P_WATER.channel": {
+   "value": "слот 2, канал 2",
+   "docs": [
+    "is9/perechen_signalov_is9.md"
+   ],
+   "name": "Давление воды в контуре",
+   "module": "МВА-8"
+  },
+  "is9.P_WATER.sensor": {
+   "value": "ДД-100",
+   "docs": [
+    "is9/perechen_signalov_is9.md"
+   ],
+   "name": "Давление воды в контуре"
+  },
+  "is9.P_OIL.channel": {
+   "value": "слот 2, канал 3",
+   "docs": [
+    "is9/perechen_signalov_is9.md"
+   ],
+   "name": "Давление масла на выходе насоса",
+   "module": "МВА-8"
+  },
+  "is9.P_OIL.sensor": {
+   "value": "ДД-100",
+   "docs": [
+    "is9/perechen_signalov_is9.md"
+   ],
+   "name": "Давление масла на выходе насоса"
+  },
+  "is9.Q_OIL.channel": {
+   "value": "слот 2, канал 4",
+   "docs": [
+    "is9/perechen_signalov_is9.md"
+   ],
+   "name": "Расход масла",
+   "module": "МВА-8"
+  },
+  "is9.Q_OIL.sensor": {
+   "value": "РМ-40",
+   "docs": [
+    "is9/perechen_signalov_is9.md"
+   ],
+   "name": "Расход масла"
+  },
+  "is9.T_W_IN.channel": {
+   "value": "слот 3, канал 1",
+   "docs": [
+    "is9/perechen_signalov_is9.md"
+   ],
+   "name": "Температура воды на входе теплообменника",
+   "module": "МВТ-8"
+  },
+  "is9.T_W_IN.sensor": {
+   "value": "ТП-К",
+   "docs": [
+    "is9/perechen_signalov_is9.md"
+   ],
+   "name": "Температура воды на входе теплообменника"
+  },
+  "is9.T_W_OUT.channel": {
+   "value": "слот 3, канал 2",
+   "docs": [
+    "is9/perechen_signalov_is9.md"
+   ],
+   "name": "Температура воды на выходе теплообменника",
+   "module": "МВТ-8"
+  },
+  "is9.T_W_OUT.sensor": {
+   "value": "ТП-К",
+   "docs": [
+    "is9/perechen_signalov_is9.md"
+   ],
+   "name": "Температура воды на выходе теплообменника"
+  },
+  "is9.T_OIL.channel": {
+   "value": "слот 3, канал 3",
+   "docs": [
+    "is9/perechen_signalov_is9.md"
+   ],
+   "name": "Температура масла в баке",
+   "module": "МВТ-8"
+  },
+  "is9.T_OIL.sensor": {
+   "value": "ТП-К",
+   "docs": [
+    "is9/perechen_signalov_is9.md"
+   ],
+   "name": "Температура масла в баке"
+  },
+  "is9.estop": {
+   "value": "слот 4, канал 1",
+   "docs": [
+    "is9/perechen_signalov_is9.md",
+    "is9/instrukciya_avariynyy_ostanov_is9.md"
+   ]
+  },
+  "is9.T_W_IN.warn": {
+   "value": "57",
+   "docs": [
+    "is9/karta_ustavok_is9.md"
+   ],
+   "unit": "°C",
+   "name": "Температура воды на входе теплообменника"
+  },
+  "is9.T_W_IN.delay": {
+   "value": "3",
+   "docs": [
+    "is9/karta_ustavok_is9.md"
+   ],
+   "name": "Температура воды на входе теплообменника"
+  },
+  "is9.T_W_OUT.warn": {
+   "value": "78",
+   "docs": [
+    "is9/karta_ustavok_is9.md"
+   ],
+   "unit": "°C",
+   "name": "Температура воды на выходе теплообменника"
+  },
+  "is9.T_W_OUT.delay": {
+   "value": "1",
+   "docs": [
+    "is9/karta_ustavok_is9.md"
+   ],
+   "name": "Температура воды на выходе теплообменника"
+  },
+  "is9.P_WATER.warn": {
+   "value": "0,95",
+   "docs": [
+    "is9/karta_ustavok_is9.md"
+   ],
+   "unit": "МПа",
+   "name": "Давление воды в контуре"
+  },
+  "is9.P_WATER.delay": {
+   "value": "0,5",
+   "docs": [
+    "is9/karta_ustavok_is9.md"
+   ],
+   "name": "Давление воды в контуре"
+  },
+  "is9.T_OIL.alarm": {
+   "value": "96",
+   "docs": [
+    "is9/karta_ustavok_is9.md"
+   ],
+   "unit": "°C",
+   "name": "Температура масла в баке"
+  },
+  "is9.T_OIL.warn": {
+   "value": "81",
+   "docs": [
+    "is9/karta_ustavok_is9.md"
+   ],
+   "unit": "°C",
+   "name": "Температура масла в баке"
+  },
+  "is9.T_OIL.delay": {
+   "value": "3",
+   "docs": [
+    "is9/karta_ustavok_is9.md"
+   ],
+   "name": "Температура масла в баке"
+  },
+  "is9.P_OIL.alarm": {
+   "value": "0,26",
+   "docs": [
+    "is9/karta_ustavok_is9.md"
+   ],
+   "unit": "МПа",
+   "name": "Давление масла на выходе насоса"
+  },
+  "is9.P_OIL.warn": {
+   "value": "0,3",
+   "docs": [
+    "is9/karta_ustavok_is9.md"
+   ],
+   "unit": "МПа",
+   "name": "Давление масла на выходе насоса"
+  },
+  "is9.P_OIL.delay": {
+   "value": "1",
+   "docs": [
+    "is9/karta_ustavok_is9.md"
+   ],
+   "name": "Давление масла на выходе насоса"
+  },
+  "is9.Q_OIL.alarm": {
+   "value": "30",
+   "docs": [
+    "is9/karta_ustavok_is9.md"
+   ],
+   "unit": "л/мин",
+   "name": "Расход масла"
+  },
+  "is9.Q_OIL.warn": {
+   "value": "42",
+   "docs": [
+    "is9/karta_ustavok_is9.md"
+   ],
+   "unit": "л/мин",
+   "name": "Расход масла"
+  },
+  "is9.Q_OIL.delay": {
+   "value": "2",
+   "docs": [
+    "is9/karta_ustavok_is9.md"
+   ],
+   "name": "Расход масла"
+  },
+  "is9.min_oil_temp": {
+   "value": "25",
+   "docs": [
+    "is9/instrukciya_pusk_is9.txt"
+   ]
+  },
+  "is9.warmup": {
+   "value": "5",
+   "docs": [
+    "is9/instrukciya_pusk_is9.txt"
+   ]
+  },
+  "is9.restart_wait": {
+   "value": "15",
+   "docs": [
+    "is9/instrukciya_avariynyy_ostanov_is9.md"
+   ]
+  },
+  "is9.calib.давления": {
+   "value": "6",
+   "docs": [
+    "is9/metodika_kalibrovki_is9.md"
+   ]
+  },
+  "is9.calib.температуры": {
+   "value": "24",
+   "docs": [
+    "is9/metodika_kalibrovki_is9.md"
+   ]
+  },
+  "is9.calib.прочих аналоговых": {
+   "value": "12",
+   "docs": [
+    "is9/metodika_kalibrovki_is9.md"
+   ]
+  },
+  "is9.delay_change_ver": {
+   "value": "1.1",
+   "docs": [
+    "is9/zhurnal_po_plk_is9.md"
+   ],
+   "name": "Давление воды в контуре",
+   "old": "2",
+   "new": "0,5"
+  },
+  "is9.last_ver": {
+   "value": "1.4",
+   "docs": [
+    "is9/zhurnal_po_plk_is9.md"
+   ],
+   "date": "12.09.2025"
+  },
+  "is9.filter_hours": {
+   "value": "250",
+   "docs": [
+    "is9/reglament_to_is9.md"
+   ]
+  },
+  "is9.unit_id": {
+   "value": "12",
+   "docs": [
+    "is9/modbus_karta_is9.md"
+   ]
+  },
+  "is9.P_WATER.modbus": {
+   "value": "30001",
+   "docs": [
+    "is9/modbus_karta_is9.md"
+   ],
+   "name": "Давление воды в контуре"
+  },
+  "is9.P_OIL.modbus": {
+   "value": "30003",
+   "docs": [
+    "is9/modbus_karta_is9.md"
+   ],
+   "name": "Давление масла на выходе насоса"
+  },
+  "is9.Q_OIL.modbus": {
+   "value": "30005",
+   "docs": [
+    "is9/modbus_karta_is9.md"
+   ],
+   "name": "Расход масла"
+  },
+  "is9.T_W_IN.modbus": {
+   "value": "30007",
+   "docs": [
+    "is9/modbus_karta_is9.md"
+   ],
+   "name": "Температура воды на входе теплообменника"
+  },
+  "is9.T_W_OUT.modbus": {
+   "value": "30009",
+   "docs": [
+    "is9/modbus_karta_is9.md"
+   ],
+   "name": "Температура воды на выходе теплообменника"
+  },
+  "is9.T_OIL.modbus": {
+   "value": "30011",
+   "docs": [
+    "is9/modbus_karta_is9.md"
+   ],
+   "name": "Температура масла в баке"
+  },
+  "proto.ПИ-ИС-9-2024-048.result": {
+   "value": "соответствует",
+   "docs": [
+    "is9/protokol_1_is9.md"
+   ],
+   "stand": "ИС-9"
+  },
+  "proto.ПИ-ИС-9-2024-048.serial": {
+   "value": "87658",
+   "docs": [
+    "is9/protokol_1_is9.md"
+   ],
+   "stand": "ИС-9"
+  },
+  "proto.ПИ-ИС-9-2024-048.mode2": {
+   "value": "53",
+   "docs": [
+    "is9/protokol_1_is9.md"
+   ],
+   "stand": "ИС-9",
+   "unit": "°C",
+   "param": "Температура воды на входе теплообменника"
+  },
+  "proto.ПИ-ИС-9-2024-048.duration": {
+   "value": "60",
+   "docs": [
+    "is9/protokol_1_is9.md"
+   ],
+   "stand": "ИС-9"
+  },
+  "proto.ПИ-ИС-9-2024-073.result": {
+   "value": "не соответствует",
+   "docs": [
+    "is9/protokol_2_is9.md"
+   ],
+   "stand": "ИС-9"
+  },
+  "proto.ПИ-ИС-9-2024-073.serial": {
+   "value": "87660",
+   "docs": [
+    "is9/protokol_2_is9.md"
+   ],
+   "stand": "ИС-9"
+  },
+  "proto.ПИ-ИС-9-2024-073.mode2": {
+   "value": "51",
+   "docs": [
+    "is9/protokol_2_is9.md"
+   ],
+   "stand": "ИС-9",
+   "unit": "°C",
+   "param": "Температура воды на входе теплообменника"
+  },
+  "proto.ПИ-ИС-9-2024-073.duration": {
+   "value": "60",
+   "docs": [
+    "is9/protokol_2_is9.md"
+   ],
+   "stand": "ИС-9"
+  },
+  "gs2.plc": {
+   "value": "К-210",
+   "docs": [
+    "gs2/re_gs2.md"
+   ]
+  },
+  "gs2.ip": {
+   "value": "192.168.14.20",
+   "docs": [
+    "gs2/re_gs2.md",
+    "gs2/modbus_karta_gs2.md"
+   ]
+  },
+  "gs2.P_HYD.alarm": {
+   "value": "33",
+   "docs": [
+    "gs2/re_gs2.md",
+    "gs2/karta_ustavok_gs2.md"
+   ],
+   "unit": "МПа",
+   "name": "Давление в гидросистеме"
+  },
+  "gs2.T_HYD.alarm": {
+   "value": "68",
+   "docs": [
+    "gs2/re_gs2.md",
+    "gs2/karta_ustavok_gs2.md"
+   ],
+   "unit": "°C",
+   "name": "Температура рабочей жидкости"
+  },
+  "gs2.Q_OIL.alarm": {
+   "value": "29",
+   "docs": [
+    "gs2/re_gs2.md",
+    "gs2/karta_ustavok_gs2.md"
+   ],
+   "unit": "л/мин",
+   "name": "Расход масла"
+  },
+  "gs2.P_HYD.channel": {
+   "value": "слот 2, канал 2",
+   "docs": [
+    "gs2/perechen_signalov_gs2.md"
+   ],
+   "name": "Давление в гидросистеме",
+   "module": "МВА-8"
+  },
+  "gs2.P_HYD.sensor": {
+   "value": "ДД-250",
+   "docs": [
+    "gs2/perechen_signalov_gs2.md"
+   ],
+   "name": "Давление в гидросистеме"
+  },
+  "gs2.Q_OIL.channel": {
+   "value": "слот 2, канал 3",
+   "docs": [
+    "gs2/perechen_signalov_gs2.md"
+   ],
+   "name": "Расход масла",
+   "module": "МВА-8"
+  },
+  "gs2.Q_OIL.sensor": {
+   "value": "РМ-40",
+   "docs": [
+    "gs2/perechen_signalov_gs2.md"
+   ],
+   "name": "Расход масла"
+  },
+  "gs2.I_MOT.channel": {
+   "value": "слот 2, канал 4",
+   "docs": [
+    "gs2/perechen_signalov_gs2.md"
+   ],
+   "name": "Ток двигателя привода",
+   "module": "МВА-8"
+  },
+  "gs2.I_MOT.sensor": {
+   "value": "ТТ-5",
+   "docs": [
+    "gs2/perechen_signalov_gs2.md"
+   ],
+   "name": "Ток двигателя привода"
+  },
+  "gs2.T_HYD.channel": {
+   "value": "слот 3, канал 1",
+   "docs": [
+    "gs2/perechen_signalov_gs2.md"
+   ],
+   "name": "Температура рабочей жидкости",
+   "module": "МВТ-8"
+  },
+  "gs2.T_HYD.sensor": {
+   "value": "ТП-К",
+   "docs": [
+    "gs2/perechen_signalov_gs2.md"
+   ],
+   "name": "Температура рабочей жидкости"
+  },
+  "gs2.estop": {
+   "value": "слот 4, канал 1",
+   "docs": [
+    "gs2/perechen_signalov_gs2.md",
+    "gs2/instrukciya_avariynyy_ostanov_gs2.md"
+   ]
+  },
+  "gs2.P_HYD.warn": {
+   "value": "27",
+   "docs": [
+    "gs2/karta_ustavok_gs2.md"
+   ],
+   "unit": "МПа",
+   "name": "Давление в гидросистеме"
+  },
+  "gs2.P_HYD.delay": {
+   "value": "3",
+   "docs": [
+    "gs2/karta_ustavok_gs2.md"
+   ],
+   "name": "Давление в гидросистеме"
+  },
+  "gs2.T_HYD.warn": {
+   "value": "62",
+   "docs": [
+    "gs2/karta_ustavok_gs2.md"
+   ],
+   "unit": "°C",
+   "name": "Температура рабочей жидкости"
+  },
+  "gs2.T_HYD.delay": {
+   "value": "0,5",
+   "docs": [
+    "gs2/karta_ustavok_gs2.md"
+   ],
+   "name": "Температура рабочей жидкости"
+  },
+  "gs2.Q_OIL.warn": {
+   "value": "41",
+   "docs": [
+    "gs2/karta_ustavok_gs2.md"
+   ],
+   "unit": "л/мин",
+   "name": "Расход масла"
+  },
+  "gs2.Q_OIL.delay": {
+   "value": "0,5",
+   "docs": [
+    "gs2/karta_ustavok_gs2.md"
+   ],
+   "name": "Расход масла"
+  },
+  "gs2.I_MOT.alarm": {
+   "value": "213",
+   "docs": [
+    "gs2/karta_ustavok_gs2.md"
+   ],
+   "unit": "А",
+   "name": "Ток двигателя привода"
+  },
+  "gs2.I_MOT.warn": {
+   "value": "169",
+   "docs": [
+    "gs2/karta_ustavok_gs2.md"
+   ],
+   "unit": "А",
+   "name": "Ток двигателя привода"
+  },
+  "gs2.I_MOT.delay": {
+   "value": "5",
+   "docs": [
+    "gs2/karta_ustavok_gs2.md"
+   ],
+   "name": "Ток двигателя привода"
+  },
+  "gs2.min_oil_temp": {
+   "value": "15",
+   "docs": [
+    "gs2/instrukciya_pusk_gs2.txt"
+   ]
+  },
+  "gs2.warmup": {
+   "value": "5",
+   "docs": [
+    "gs2/instrukciya_pusk_gs2.txt"
+   ]
+  },
+  "gs2.restart_wait": {
+   "value": "30",
+   "docs": [
+    "gs2/instrukciya_avariynyy_ostanov_gs2.md"
+   ]
+  },
+  "gs2.calib.давления": {
+   "value": "6",
+   "docs": [
+    "gs2/metodika_kalibrovki_gs2.md"
+   ]
+  },
+  "gs2.calib.температуры": {
+   "value": "24",
+   "docs": [
+    "gs2/metodika_kalibrovki_gs2.md"
+   ]
+  },
+  "gs2.calib.прочих аналоговых": {
+   "value": "12",
+   "docs": [
+    "gs2/metodika_kalibrovki_gs2.md"
+   ]
+  },
+  "gs2.delay_change_ver": {
+   "value": "1.2",
+   "docs": [
+    "gs2/zhurnal_po_plk_gs2.md"
+   ],
+   "name": "Температура рабочей жидкости",
+   "old": "5",
+   "new": "0,5"
+  },
+  "gs2.last_ver": {
+   "value": "1.2",
+   "docs": [
+    "gs2/zhurnal_po_plk_gs2.md"
+   ],
+   "date": "11.10.2025"
+  },
+  "gs2.filter_hours": {
+   "value": "250",
+   "docs": [
+    "gs2/reglament_to_gs2.md"
+   ]
+  },
+  "gs2.unit_id": {
+   "value": "3",
+   "docs": [
+    "gs2/modbus_karta_gs2.md"
+   ]
+  },
+  "gs2.P_HYD.modbus": {
+   "value": "30001",
+   "docs": [
+    "gs2/modbus_karta_gs2.md"
+   ],
+   "name": "Давление в гидросистеме"
+  },
+  "gs2.Q_OIL.modbus": {
+   "value": "30003",
+   "docs": [
+    "gs2/modbus_karta_gs2.md"
+   ],
+   "name": "Расход масла"
+  },
+  "gs2.I_MOT.modbus": {
+   "value": "30005",
+   "docs": [
+    "gs2/modbus_karta_gs2.md"
+   ],
+   "name": "Ток двигателя привода"
+  },
+  "gs2.T_HYD.modbus": {
+   "value": "30007",
+   "docs": [
+    "gs2/modbus_karta_gs2.md"
+   ],
+   "name": "Температура рабочей жидкости"
+  },
+  "proto.ПИ-ГС-2-2024-043.result": {
+   "value": "соответствует",
+   "docs": [
+    "gs2/protokol_1_gs2.md"
+   ],
+   "stand": "ГС-2"
+  },
+  "proto.ПИ-ГС-2-2024-043.serial": {
+   "value": "52698",
+   "docs": [
+    "gs2/protokol_1_gs2.md"
+   ],
+   "stand": "ГС-2"
+  },
+  "proto.ПИ-ГС-2-2024-043.mode2": {
+   "value": "22",
+   "docs": [
+    "gs2/protokol_1_gs2.md"
+   ],
+   "stand": "ГС-2",
+   "unit": "МПа",
+   "param": "Давление в гидросистеме"
+  },
+  "proto.ПИ-ГС-2-2024-043.duration": {
+   "value": "90",
+   "docs": [
+    "gs2/protokol_1_gs2.md"
+   ],
+   "stand": "ГС-2"
+  },
+  "proto.ПИ-ГС-2-2024-018.result": {
+   "value": "соответствует",
+   "docs": [
+    "gs2/protokol_2_gs2.md"
+   ],
+   "stand": "ГС-2"
+  },
+  "proto.ПИ-ГС-2-2024-018.serial": {
+   "value": "52236",
+   "docs": [
+    "gs2/protokol_2_gs2.md"
+   ],
+   "stand": "ГС-2"
+  },
+  "proto.ПИ-ГС-2-2024-018.mode2": {
+   "value": "20",
+   "docs": [
+    "gs2/protokol_2_gs2.md"
+   ],
+   "stand": "ГС-2",
+   "unit": "МПа",
+   "param": "Давление в гидросистеме"
+  },
+  "proto.ПИ-ГС-2-2024-018.duration": {
+   "value": "30",
+   "docs": [
+    "gs2/protokol_2_gs2.md"
+   ],
+   "stand": "ГС-2"
+  },
+  "gs4.plc": {
+   "value": "К-220",
+   "docs": [
+    "gs4/re_gs4.md"
+   ]
+  },
+  "gs4.ip": {
+   "value": "192.168.15.20",
+   "docs": [
+    "gs4/re_gs4.md",
+    "gs4/modbus_karta_gs4.md"
+   ]
+  },
+  "gs4.P_TEST.alarm": {
+   "value": "50",
+   "docs": [
+    "gs4/re_gs4.md",
+    "gs4/karta_ustavok_gs4.md"
+   ],
+   "unit": "МПа",
+   "name": "Испытательное давление в изделии"
+  },
+  "gs4.P_HYD.alarm": {
+   "value": "31",
+   "docs": [
+    "gs4/re_gs4.md",
+    "gs4/karta_ustavok_gs4.md"
+   ],
+   "unit": "МПа",
+   "name": "Давление в гидросистеме"
+  },
+  "gs4.T_HYD.alarm": {
+   "value": "68",
+   "docs": [
+    "gs4/re_gs4.md",
+    "gs4/karta_ustavok_gs4.md"
+   ],
+   "unit": "°C",
+   "name": "Температура рабочей жидкости"
+  },
+  "gs4.P_TEST.channel": {
+   "value": "слот 2, канал 3",
+   "docs": [
+    "gs4/perechen_signalov_gs4.md"
+   ],
+   "name": "Испытательное давление в изделии",
+   "module": "МВА-8"
+  },
+  "gs4.P_TEST.sensor": {
+   "value": "ДД-250",
+   "docs": [
+    "gs4/perechen_signalov_gs4.md"
+   ],
+   "name": "Испытательное давление в изделии"
+  },
+  "gs4.P_HYD.channel": {
+   "value": "слот 2, канал 4",
+   "docs": [
+    "gs4/perechen_signalov_gs4.md"
+   ],
+   "name": "Давление в гидросистеме",
+   "module": "МВА-8"
+  },
+  "gs4.P_HYD.sensor": {
+   "value": "ДД-250",
+   "docs": [
+    "gs4/perechen_signalov_gs4.md"
+   ],
+   "name": "Давление в гидросистеме"
+  },
+  "gs4.I_MOT.channel": {
+   "value": "слот 2, канал 5",
+   "docs": [
+    "gs4/perechen_signalov_gs4.md"
+   ],
+   "name": "Ток двигателя привода",
+   "module": "МВА-8"
+  },
+  "gs4.I_MOT.sensor": {
+   "value": "ТТ-5",
+   "docs": [
+    "gs4/perechen_signalov_gs4.md"
+   ],
+   "name": "Ток двигателя привода"
+  },
+  "gs4.T_HYD.channel": {
+   "value": "слот 3, канал 1",
+   "docs": [
+    "gs4/perechen_signalov_gs4.md"
+   ],
+   "name": "Температура рабочей жидкости",
+   "module": "МВТ-8"
+  },
+  "gs4.T_HYD.sensor": {
+   "value": "ТП-К",
+   "docs": [
+    "gs4/perechen_signalov_gs4.md"
+   ],
+   "name": "Температура рабочей жидкости"
+  },
+  "gs4.estop": {
+   "value": "слот 4, канал 4",
+   "docs": [
+    "gs4/perechen_signalov_gs4.md",
+    "gs4/instrukciya_avariynyy_ostanov_gs4.md"
+   ]
+  },
+  "gs4.P_TEST.warn": {
+   "value": "46",
+   "docs": [
+    "gs4/karta_ustavok_gs4.md"
+   ],
+   "unit": "МПа",
+   "name": "Испытательное давление в изделии"
+  },
+  "gs4.P_TEST.delay": {
+   "value": "2",
+   "docs": [
+    "gs4/karta_ustavok_gs4.md"
+   ],
+   "name": "Испытательное давление в изделии"
+  },
+  "gs4.P_HYD.warn": {
+   "value": "28",
+   "docs": [
+    "gs4/karta_ustavok_gs4.md"
+   ],
+   "unit": "МПа",
+   "name": "Давление в гидросистеме"
+  },
+  "gs4.P_HYD.delay": {
+   "value": "1",
+   "docs": [
+    "gs4/karta_ustavok_gs4.md"
+   ],
+   "name": "Давление в гидросистеме"
+  },
+  "gs4.T_HYD.warn": {
+   "value": "58",
+   "docs": [
+    "gs4/karta_ustavok_gs4.md"
+   ],
+   "unit": "°C",
+   "name": "Температура рабочей жидкости"
+  },
+  "gs4.T_HYD.delay": {
+   "value": "1",
+   "docs": [
+    "gs4/karta_ustavok_gs4.md"
+   ],
+   "name": "Температура рабочей жидкости"
+  },
+  "gs4.I_MOT.alarm": {
+   "value": "208",
+   "docs": [
+    "gs4/karta_ustavok_gs4.md"
+   ],
+   "unit": "А",
+   "name": "Ток двигателя привода"
+  },
+  "gs4.I_MOT.warn": {
+   "value": "188",
+   "docs": [
+    "gs4/karta_ustavok_gs4.md"
+   ],
+   "unit": "А",
+   "name": "Ток двигателя привода"
+  },
+  "gs4.I_MOT.delay": {
+   "value": "3",
+   "docs": [
+    "gs4/karta_ustavok_gs4.md"
+   ],
+   "name": "Ток двигателя привода"
+  },
+  "gs4.min_oil_temp": {
+   "value": "30",
+   "docs": [
+    "gs4/instrukciya_pusk_gs4.txt"
+   ]
+  },
+  "gs4.warmup": {
+   "value": "15",
+   "docs": [
+    "gs4/instrukciya_pusk_gs4.txt"
+   ]
+  },
+  "gs4.restart_wait": {
+   "value": "10",
+   "docs": [
+    "gs4/instrukciya_avariynyy_ostanov_gs4.md"
+   ]
+  },
+  "gs4.calib.давления": {
+   "value": "12",
+   "docs": [
+    "gs4/metodika_kalibrovki_gs4.md"
+   ]
+  },
+  "gs4.calib.температуры": {
+   "value": "24",
+   "docs": [
+    "gs4/metodika_kalibrovki_gs4.md"
+   ]
+  },
+  "gs4.calib.прочих аналоговых": {
+   "value": "24",
+   "docs": [
+    "gs4/metodika_kalibrovki_gs4.md"
+   ]
+  },
+  "gs4.delay_change_ver": {
+   "value": "1.3",
+   "docs": [
+    "gs4/zhurnal_po_plk_gs4.md"
+   ],
+   "name": "Температура рабочей жидкости",
+   "old": "0,5",
+   "new": "1"
+  },
+  "gs4.last_ver": {
+   "value": "1.4",
+   "docs": [
+    "gs4/zhurnal_po_plk_gs4.md"
+   ],
+   "date": "10.12.2025"
+  },
+  "gs4.filter_hours": {
+   "value": "250",
+   "docs": [
+    "gs4/reglament_to_gs4.md"
+   ]
+  },
+  "gs4.unit_id": {
+   "value": "14",
+   "docs": [
+    "gs4/modbus_karta_gs4.md"
+   ]
+  },
+  "gs4.P_TEST.modbus": {
+   "value": "30001",
+   "docs": [
+    "gs4/modbus_karta_gs4.md"
+   ],
+   "name": "Испытательное давление в изделии"
+  },
+  "gs4.P_HYD.modbus": {
+   "value": "30003",
+   "docs": [
+    "gs4/modbus_karta_gs4.md"
+   ],
+   "name": "Давление в гидросистеме"
+  },
+  "gs4.I_MOT.modbus": {
+   "value": "30005",
+   "docs": [
+    "gs4/modbus_karta_gs4.md"
+   ],
+   "name": "Ток двигателя привода"
+  },
+  "gs4.T_HYD.modbus": {
+   "value": "30007",
+   "docs": [
+    "gs4/modbus_karta_gs4.md"
+   ],
+   "name": "Температура рабочей жидкости"
+  },
+  "proto.ПИ-ГС-4-2024-034.result": {
+   "value": "соответствует",
+   "docs": [
+    "gs4/protokol_1_gs4.pdf"
+   ],
+   "stand": "ГС-4"
+  },
+  "proto.ПИ-ГС-4-2024-034.serial": {
+   "value": "90643",
+   "docs": [
+    "gs4/protokol_1_gs4.pdf"
+   ],
+   "stand": "ГС-4"
+  },
+  "proto.ПИ-ГС-4-2024-034.mode2": {
+   "value": "32",
+   "docs": [
+    "gs4/protokol_1_gs4.pdf"
+   ],
+   "stand": "ГС-4",
+   "unit": "МПа",
+   "param": "Испытательное давление в изделии"
+  },
+  "proto.ПИ-ГС-4-2024-034.duration": {
+   "value": "120",
+   "docs": [
+    "gs4/protokol_1_gs4.pdf"
+   ],
+   "stand": "ГС-4"
+  },
+  "proto.ПИ-ГС-4-2024-080.result": {
+   "value": "соответствует",
+   "docs": [
+    "gs4/protokol_2_gs4.pdf"
+   ],
+   "stand": "ГС-4"
+  },
+  "proto.ПИ-ГС-4-2024-080.serial": {
+   "value": "90799",
+   "docs": [
+    "gs4/protokol_2_gs4.pdf"
+   ],
+   "stand": "ГС-4"
+  },
+  "proto.ПИ-ГС-4-2024-080.mode2": {
+   "value": "31",
+   "docs": [
+    "gs4/protokol_2_gs4.pdf"
+   ],
+   "stand": "ГС-4",
+   "unit": "МПа",
+   "param": "Испытательное давление в изделии"
+  },
+  "proto.ПИ-ГС-4-2024-080.duration": {
+   "value": "45",
+   "docs": [
+    "gs4/protokol_2_gs4.pdf"
+   ],
+   "stand": "ГС-4"
+  },
+  "es1.plc": {
+   "value": "К-220",
+   "docs": [
+    "es1/re_es1.md"
+   ]
+  },
+  "es1.ip": {
+   "value": "192.168.16.50",
+   "docs": [
+    "es1/re_es1.md",
+    "es1/modbus_karta_es1.md"
+   ]
+  },
+  "es1.I_MOT.alarm": {
+   "value": "200",
+   "docs": [
+    "es1/re_es1.md",
+    "es1/karta_ustavok_es1.md"
+   ],
+   "unit": "А",
+   "name": "Ток двигателя привода"
+  },
+  "es1.U_MOT.alarm": {
+   "value": "500",
+   "docs": [
+    "es1/re_es1.md",
+    "es1/karta_ustavok_es1.md"
+   ],
+   "unit": "В",
+   "name": "Напряжение питания двигателя"
+  },
+  "es1.T_WIND.alarm": {
+   "value": "161",
+   "docs": [
+    "es1/re_es1.md",
+    "es1/karta_ustavok_es1.md"
+   ],
+   "unit": "°C",
+   "name": "Температура обмотки статора"
+  },
+  "es1.I_MOT.channel": {
+   "value": "слот 2, канал 2",
+   "docs": [
+    "es1/perechen_signalov_es1.md"
+   ],
+   "name": "Ток двигателя привода",
+   "module": "МВА-8"
+  },
+  "es1.I_MOT.sensor": {
+   "value": "ТТ-5",
+   "docs": [
+    "es1/perechen_signalov_es1.md"
+   ],
+   "name": "Ток двигателя привода"
+  },
+  "es1.U_MOT.channel": {
+   "value": "слот 2, канал 3",
+   "docs": [
+    "es1/perechen_signalov_es1.md"
+   ],
+   "name": "Напряжение питания двигателя",
+   "module": "МВА-8"
+  },
+  "es1.U_MOT.sensor": {
+   "value": "ТТ-5",
+   "docs": [
+    "es1/perechen_signalov_es1.md"
+   ],
+   "name": "Напряжение питания двигателя"
+  },
+  "es1.N_ROT.channel": {
+   "value": "слот 2, канал 4",
+   "docs": [
+    "es1/perechen_signalov_es1.md"
+   ],
+   "name": "Частота вращения вала",
+   "module": "МВА-8"
+  },
+  "es1.N_ROT.sensor": {
+   "value": "ДЧ-3",
+   "docs": [
+    "es1/perechen_signalov_es1.md"
+   ],
+   "name": "Частота вращения вала"
+  },
+  "es1.V_BRG.channel": {
+   "value": "слот 2, канал 5",
+   "docs": [
+    "es1/perechen_signalov_es1.md"
+   ],
+   "name": "Виброскорость опоры подшипника",
+   "module": "МВА-8"
+  },
+  "es1.V_BRG.sensor": {
+   "value": "ДВ-20",
+   "docs": [
+    "es1/perechen_signalov_es1.md"
+   ],
+   "name": "Виброскорость опоры подшипника"
+  },
+  "es1.M_TORQ.channel": {
+   "value": "слот 2, канал 6",
+   "docs": [
+    "es1/perechen_signalov_es1.md"
+   ],
+   "name": "Крутящий момент на входном валу",
+   "module": "МВА-8"
+  },
+  "es1.M_TORQ.sensor": {
+   "value": "ДМ-10",
+   "docs": [
+    "es1/perechen_signalov_es1.md"
+   ],
+   "name": "Крутящий момент на входном валу"
+  },
+  "es1.T_WIND.channel": {
+   "value": "слот 3, канал 1",
+   "docs": [
+    "es1/perechen_signalov_es1.md"
+   ],
+   "name": "Температура обмотки статора",
+   "module": "МВТ-8"
+  },
+  "es1.T_WIND.sensor": {
+   "value": "ТП-К",
+   "docs": [
+    "es1/perechen_signalov_es1.md"
+   ],
+   "name": "Температура обмотки статора"
+  },
+  "es1.estop": {
+   "value": "слот 4, канал 2",
+   "docs": [
+    "es1/perechen_signalov_es1.md",
+    "es1/instrukciya_avariynyy_ostanov_es1.md"
+   ]
+  },
+  "es1.I_MOT.warn": {
+   "value": "169",
+   "docs": [
+    "es1/karta_ustavok_es1.md"
+   ],
+   "unit": "А",
+   "name": "Ток двигателя привода"
+  },
+  "es1.I_MOT.delay": {
+   "value": "5",
+   "docs": [
+    "es1/karta_ustavok_es1.md"
+   ],
+   "name": "Ток двигателя привода"
+  },
+  "es1.U_MOT.warn": {
+   "value": "450",
+   "docs": [
+    "es1/karta_ustavok_es1.md"
+   ],
+   "unit": "В",
+   "name": "Напряжение питания двигателя"
+  },
+  "es1.U_MOT.delay": {
+   "value": "5",
+   "docs": [
+    "es1/karta_ustavok_es1.md"
+   ],
+   "name": "Напряжение питания двигателя"
+  },
+  "es1.T_WIND.warn": {
+   "value": "135",
+   "docs": [
+    "es1/karta_ustavok_es1.md"
+   ],
+   "unit": "°C",
+   "name": "Температура обмотки статора"
+  },
+  "es1.T_WIND.delay": {
+   "value": "1",
+   "docs": [
+    "es1/karta_ustavok_es1.md"
+   ],
+   "name": "Температура обмотки статора"
+  },
+  "es1.N_ROT.alarm": {
+   "value": "10100",
+   "docs": [
+    "es1/karta_ustavok_es1.md"
+   ],
+   "unit": "об/мин",
+   "name": "Частота вращения вала"
+  },
+  "es1.N_ROT.warn": {
+   "value": "9250",
+   "docs": [
+    "es1/karta_ustavok_es1.md"
+   ],
+   "unit": "об/мин",
+   "name": "Частота вращения вала"
+  },
+  "es1.N_ROT.delay": {
+   "value": "2",
+   "docs": [
+    "es1/karta_ustavok_es1.md"
+   ],
+   "name": "Частота вращения вала"
+  },
+  "es1.V_BRG.alarm": {
+   "value": "11,7",
+   "docs": [
+    "es1/karta_ustavok_es1.md"
+   ],
+   "unit": "мм/с",
+   "name": "Виброскорость опоры подшипника"
+  },
+  "es1.V_BRG.warn": {
+   "value": "7,5",
+   "docs": [
+    "es1/karta_ustavok_es1.md"
+   ],
+   "unit": "мм/с",
+   "name": "Виброскорость опоры подшипника"
+  },
+  "es1.V_BRG.delay": {
+   "value": "5",
+   "docs": [
+    "es1/karta_ustavok_es1.md"
+   ],
+   "name": "Виброскорость опоры подшипника"
+  },
+  "es1.M_TORQ.alarm": {
+   "value": "1750",
+   "docs": [
+    "es1/karta_ustavok_es1.md"
+   ],
+   "unit": "Н·м",
+   "name": "Крутящий момент на входном валу"
+  },
+  "es1.M_TORQ.warn": {
+   "value": "1650",
+   "docs": [
+    "es1/karta_ustavok_es1.md"
+   ],
+   "unit": "Н·м",
+   "name": "Крутящий момент на входном валу"
+  },
+  "es1.M_TORQ.delay": {
+   "value": "5",
+   "docs": [
+    "es1/karta_ustavok_es1.md"
+   ],
+   "name": "Крутящий момент на входном валу"
+  },
+  "es1.min_oil_temp": {
+   "value": "25",
+   "docs": [
+    "es1/instrukciya_pusk_es1.txt"
+   ]
+  },
+  "es1.warmup": {
+   "value": "20",
+   "docs": [
+    "es1/instrukciya_pusk_es1.txt"
+   ]
+  },
+  "es1.restart_wait": {
+   "value": "15",
+   "docs": [
+    "es1/instrukciya_avariynyy_ostanov_es1.md"
+   ]
+  },
+  "es1.calib.давления": {
+   "value": "6",
+   "docs": [
+    "es1/metodika_kalibrovki_es1.md"
+   ]
+  },
+  "es1.calib.температуры": {
+   "value": "24",
+   "docs": [
+    "es1/metodika_kalibrovki_es1.md"
+   ]
+  },
+  "es1.calib.прочих аналоговых": {
+   "value": "12",
+   "docs": [
+    "es1/metodika_kalibrovki_es1.md"
+   ]
+  },
+  "es1.delay_change_ver": {
+   "value": "1.1",
+   "docs": [
+    "es1/zhurnal_po_plk_es1.md"
+   ],
+   "name": "Температура обмотки статора",
+   "old": "0,5",
+   "new": "1"
+  },
+  "es1.last_ver": {
+   "value": "1.3",
+   "docs": [
+    "es1/zhurnal_po_plk_es1.md"
+   ],
+   "date": "04.01.2025"
+  },
+  "es1.filter_hours": {
+   "value": "750",
+   "docs": [
+    "es1/reglament_to_es1.md"
+   ]
+  },
+  "es1.unit_id": {
+   "value": "20",
+   "docs": [
+    "es1/modbus_karta_es1.md"
+   ]
+  },
+  "es1.I_MOT.modbus": {
+   "value": "30001",
+   "docs": [
+    "es1/modbus_karta_es1.md"
+   ],
+   "name": "Ток двигателя привода"
+  },
+  "es1.U_MOT.modbus": {
+   "value": "30003",
+   "docs": [
+    "es1/modbus_karta_es1.md"
+   ],
+   "name": "Напряжение питания двигателя"
+  },
+  "es1.N_ROT.modbus": {
+   "value": "30005",
+   "docs": [
+    "es1/modbus_karta_es1.md"
+   ],
+   "name": "Частота вращения вала"
+  },
+  "es1.V_BRG.modbus": {
+   "value": "30007",
+   "docs": [
+    "es1/modbus_karta_es1.md"
+   ],
+   "name": "Виброскорость опоры подшипника"
+  },
+  "es1.M_TORQ.modbus": {
+   "value": "30009",
+   "docs": [
+    "es1/modbus_karta_es1.md"
+   ],
+   "name": "Крутящий момент на входном валу"
+  },
+  "es1.T_WIND.modbus": {
+   "value": "30011",
+   "docs": [
+    "es1/modbus_karta_es1.md"
+   ],
+   "name": "Температура обмотки статора"
+  },
+  "proto.ПИ-ЭС-1-2024-114.result": {
+   "value": "соответствует",
+   "docs": [
+    "es1/protokol_1_es1.md"
+   ],
+   "stand": "ЭС-1"
+  },
+  "proto.ПИ-ЭС-1-2024-114.serial": {
+   "value": "49103",
+   "docs": [
+    "es1/protokol_1_es1.md"
+   ],
+   "stand": "ЭС-1"
+  },
+  "proto.ПИ-ЭС-1-2024-114.mode2": {
+   "value": "133",
+   "docs": [
+    "es1/protokol_1_es1.md"
+   ],
+   "stand": "ЭС-1",
+   "unit": "А",
+   "param": "Ток двигателя привода"
+  },
+  "proto.ПИ-ЭС-1-2024-114.duration": {
+   "value": "30",
+   "docs": [
+    "es1/protokol_1_es1.md"
+   ],
+   "stand": "ЭС-1"
+  },
+  "proto.ПИ-ЭС-1-2025-077.result": {
+   "value": "не соответствует",
+   "docs": [
+    "es1/protokol_2_es1.md"
+   ],
+   "stand": "ЭС-1"
+  },
+  "proto.ПИ-ЭС-1-2025-077.serial": {
+   "value": "49983",
+   "docs": [
+    "es1/protokol_2_es1.md"
+   ],
+   "stand": "ЭС-1"
+  },
+  "proto.ПИ-ЭС-1-2025-077.mode2": {
+   "value": "128",
+   "docs": [
+    "es1/protokol_2_es1.md"
+   ],
+   "stand": "ЭС-1",
+   "unit": "А",
+   "param": "Ток двигателя привода"
+  },
+  "proto.ПИ-ЭС-1-2025-077.duration": {
+   "value": "90",
+   "docs": [
+    "es1/protokol_2_es1.md"
+   ],
+   "stand": "ЭС-1"
+  },
+  "vs6.plc": {
+   "value": "К-240",
+   "docs": [
+    "vs6/re_vs6.md"
+   ]
+  },
+  "vs6.ip": {
+   "value": "192.168.17.50",
+   "docs": [
+    "vs6/re_vs6.md",
+    "vs6/modbus_karta_vs6.md"
+   ]
+  },
+  "vs6.A_VIB.alarm": {
+   "value": "188",
+   "docs": [
+    "vs6/re_vs6.md",
+    "vs6/karta_ustavok_vs6.md"
+   ],
+   "unit": "м/с²",
+   "name": "Виброускорение стола"
+  },
+  "vs6.F_VIB.alarm": {
+   "value": "2050",
+   "docs": [
+    "vs6/re_vs6.md",
+    "vs6/karta_ustavok_vs6.md"
+   ],
+   "unit": "Гц",
+   "name": "Частота возбуждения вибратора"
+  },
+  "vs6.T_OIL.alarm": {
+   "value": "99",
+   "docs": [
+    "vs6/re_vs6.md",
+    "vs6/karta_ustavok_vs6.md"
+   ],
+   "unit": "°C",
+   "name": "Температура масла в баке"
+  },
+  "vs6.A_VIB.channel": {
+   "value": "слот 2, канал 2",
+   "docs": [
+    "vs6/perechen_signalov_vs6.md"
+   ],
+   "name": "Виброускорение стола",
+   "module": "МВА-8"
+  },
+  "vs6.A_VIB.sensor": {
+   "value": "ДВ-20",
+   "docs": [
+    "vs6/perechen_signalov_vs6.md"
+   ],
+   "name": "Виброускорение стола"
+  },
+  "vs6.F_VIB.channel": {
+   "value": "слот 2, канал 3",
+   "docs": [
+    "vs6/perechen_signalov_vs6.md"
+   ],
+   "name": "Частота возбуждения вибратора",
+   "module": "МВА-8"
+  },
+  "vs6.F_VIB.sensor": {
+   "value": "ДЧ-3",
+   "docs": [
+    "vs6/perechen_signalov_vs6.md"
+   ],
+   "name": "Частота возбуждения вибратора"
+  },
+  "vs6.I_MOT.channel": {
+   "value": "слот 2, канал 4",
+   "docs": [
+    "vs6/perechen_signalov_vs6.md"
+   ],
+   "name": "Ток двигателя привода",
+   "module": "МВА-8"
+  },
+  "vs6.I_MOT.sensor": {
+   "value": "ТТ-5",
+   "docs": [
+    "vs6/perechen_signalov_vs6.md"
+   ],
+   "name": "Ток двигателя привода"
+  },
+  "vs6.P_OIL.channel": {
+   "value": "слот 2, канал 5",
+   "docs": [
+    "vs6/perechen_signalov_vs6.md"
+   ],
+   "name": "Давление масла на выходе насоса",
+   "module": "МВА-8"
+  },
+  "vs6.P_OIL.sensor": {
+   "value": "ДД-100",
+   "docs": [
+    "vs6/perechen_signalov_vs6.md"
+   ],
+   "name": "Давление масла на выходе насоса"
+  },
+  "vs6.T_OIL.channel": {
+   "value": "слот 3, канал 1",
+   "docs": [
+    "vs6/perechen_signalov_vs6.md"
+   ],
+   "name": "Температура масла в баке",
+   "module": "МВТ-8"
+  },
+  "vs6.T_OIL.sensor": {
+   "value": "ТП-К",
+   "docs": [
+    "vs6/perechen_signalov_vs6.md"
+   ],
+   "name": "Температура масла в баке"
+  },
+  "vs6.estop": {
+   "value": "слот 4, канал 3",
+   "docs": [
+    "vs6/perechen_signalov_vs6.md",
+    "vs6/instrukciya_avariynyy_ostanov_vs6.md"
+   ]
+  },
+  "vs6.A_VIB.warn": {
+   "value": "154",
+   "docs": [
+    "vs6/karta_ustavok_vs6.md"
+   ],
+   "unit": "м/с²",
+   "name": "Виброускорение стола"
+  },
+  "vs6.A_VIB.delay": {
+   "value": "0,5",
+   "docs": [
+    "vs6/karta_ustavok_vs6.md"
+   ],
+   "name": "Виброускорение стола"
+  },
+  "vs6.F_VIB.warn": {
+   "value": "1800",
+   "docs": [
+    "vs6/karta_ustavok_vs6.md"
+   ],
+   "unit": "Гц",
+   "name": "Частота возбуждения вибратора"
+  },
+  "vs6.F_VIB.delay": {
+   "value": "5",
+   "docs": [
+    "vs6/karta_ustavok_vs6.md"
+   ],
+   "name": "Частота возбуждения вибратора"
+  },
+  "vs6.T_OIL.warn": {
+   "value": "84",
+   "docs": [
+    "vs6/karta_ustavok_vs6.md"
+   ],
+   "unit": "°C",
+   "name": "Температура масла в баке"
+  },
+  "vs6.T_OIL.delay": {
+   "value": "3",
+   "docs": [
+    "vs6/karta_ustavok_vs6.md"
+   ],
+   "name": "Температура масла в баке"
+  },
+  "vs6.I_MOT.alarm": {
+   "value": "216",
+   "docs": [
+    "vs6/karta_ustavok_vs6.md"
+   ],
+   "unit": "А",
+   "name": "Ток двигателя привода"
+  },
+  "vs6.I_MOT.warn": {
+   "value": "178",
+   "docs": [
+    "vs6/karta_ustavok_vs6.md"
+   ],
+   "unit": "А",
+   "name": "Ток двигателя привода"
+  },
+  "vs6.I_MOT.delay": {
+   "value": "5",
+   "docs": [
+    "vs6/karta_ustavok_vs6.md"
+   ],
+   "name": "Ток двигателя привода"
+  },
+  "vs6.P_OIL.alarm": {
+   "value": "0,24",
+   "docs": [
+    "vs6/karta_ustavok_vs6.md"
+   ],
+   "unit": "МПа",
+   "name": "Давление масла на выходе насоса"
+  },
+  "vs6.P_OIL.warn": {
+   "value": "0,31",
+   "docs": [
+    "vs6/karta_ustavok_vs6.md"
+   ],
+   "unit": "МПа",
+   "name": "Давление масла на выходе насоса"
+  },
+  "vs6.P_OIL.delay": {
+   "value": "1",
+   "docs": [
+    "vs6/karta_ustavok_vs6.md"
+   ],
+   "name": "Давление масла на выходе насоса"
+  },
+  "vs6.min_oil_temp": {
+   "value": "15",
+   "docs": [
+    "vs6/instrukciya_pusk_vs6.txt"
+   ]
+  },
+  "vs6.warmup": {
+   "value": "15",
+   "docs": [
+    "vs6/instrukciya_pusk_vs6.txt"
+   ]
+  },
+  "vs6.restart_wait": {
+   "value": "10",
+   "docs": [
+    "vs6/instrukciya_avariynyy_ostanov_vs6.md"
+   ]
+  },
+  "vs6.calib.давления": {
+   "value": "12",
+   "docs": [
+    "vs6/metodika_kalibrovki_vs6.md"
+   ]
+  },
+  "vs6.calib.температуры": {
+   "value": "12",
+   "docs": [
+    "vs6/metodika_kalibrovki_vs6.md"
+   ]
+  },
+  "vs6.calib.прочих аналоговых": {
+   "value": "12",
+   "docs": [
+    "vs6/metodika_kalibrovki_vs6.md"
+   ]
+  },
+  "vs6.delay_change_ver": {
+   "value": "1.3",
+   "docs": [
+    "vs6/zhurnal_po_plk_vs6.md"
+   ],
+   "name": "Частота возбуждения вибратора",
+   "old": "0,5",
+   "new": "5"
+  },
+  "vs6.last_ver": {
+   "value": "1.3",
+   "docs": [
+    "vs6/zhurnal_po_plk_vs6.md"
+   ],
+   "date": "13.02.2025"
+  },
+  "vs6.filter_hours": {
+   "value": "500",
+   "docs": [
+    "vs6/reglament_to_vs6.md"
+   ]
+  },
+  "vs6.unit_id": {
+   "value": "3",
+   "docs": [
+    "vs6/modbus_karta_vs6.md"
+   ]
+  },
+  "vs6.A_VIB.modbus": {
+   "value": "30001",
+   "docs": [
+    "vs6/modbus_karta_vs6.md"
+   ],
+   "name": "Виброускорение стола"
+  },
+  "vs6.F_VIB.modbus": {
+   "value": "30003",
+   "docs": [
+    "vs6/modbus_karta_vs6.md"
+   ],
+   "name": "Частота возбуждения вибратора"
+  },
+  "vs6.I_MOT.modbus": {
+   "value": "30005",
+   "docs": [
+    "vs6/modbus_karta_vs6.md"
+   ],
+   "name": "Ток двигателя привода"
+  },
+  "vs6.P_OIL.modbus": {
+   "value": "30007",
+   "docs": [
+    "vs6/modbus_karta_vs6.md"
+   ],
+   "name": "Давление масла на выходе насоса"
+  },
+  "vs6.T_OIL.modbus": {
+   "value": "30009",
+   "docs": [
+    "vs6/modbus_karta_vs6.md"
+   ],
+   "name": "Температура масла в баке"
+  },
+  "proto.ПИ-ВС-6-2024-021.result": {
+   "value": "соответствует",
+   "docs": [
+    "vs6/protokol_1_vs6.pdf"
+   ],
+   "stand": "ВС-6"
+  },
+  "proto.ПИ-ВС-6-2024-021.serial": {
+   "value": "43856",
+   "docs": [
+    "vs6/protokol_1_vs6.pdf"
+   ],
+   "stand": "ВС-6"
+  },
+  "proto.ПИ-ВС-6-2024-021.mode2": {
+   "value": "104",
+   "docs": [
+    "vs6/protokol_1_vs6.pdf"
+   ],
+   "stand": "ВС-6",
+   "unit": "м/с²",
+   "param": "Виброускорение стола"
+  },
+  "proto.ПИ-ВС-6-2024-021.duration": {
+   "value": "90",
+   "docs": [
+    "vs6/protokol_1_vs6.pdf"
+   ],
+   "stand": "ВС-6"
+  },
+  "proto.ПИ-ВС-6-2025-093.result": {
+   "value": "соответствует",
+   "docs": [
+    "vs6/protokol_2_vs6.pdf"
+   ],
+   "stand": "ВС-6"
+  },
+  "proto.ПИ-ВС-6-2025-093.serial": {
+   "value": "43488",
+   "docs": [
+    "vs6/protokol_2_vs6.pdf"
+   ],
+   "stand": "ВС-6"
+  },
+  "proto.ПИ-ВС-6-2025-093.mode2": {
+   "value": "104",
+   "docs": [
+    "vs6/protokol_2_vs6.pdf"
+   ],
+   "stand": "ВС-6",
+   "unit": "м/с²",
+   "param": "Виброускорение стола"
+  },
+  "proto.ПИ-ВС-6-2025-093.duration": {
+   "value": "45",
+   "docs": [
+    "vs6/protokol_2_vs6.pdf"
+   ],
+   "stand": "ВС-6"
+  }
+ }
+}

@@ -15,6 +15,9 @@ jobs:
     env:
       # В CI модель эмбеддингов не скачиваем: тесты идут на TF-IDF (это же задаёт tests/conftest.py)
       LDR_EMBED_BACKEND: tfidf
+      # Windows: консоль cp1252 не печатает кириллицу — принудительно UTF-8
+      PYTHONUTF8: "1"
+      PYTHONIOENCODING: utf-8
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

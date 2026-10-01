@@ -20,7 +20,6 @@ models/
 .env
 .env.*
 *.log
-CLAUDE.md
 
 # ОС и редакторы
 .DS_Store
